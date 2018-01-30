@@ -142,7 +142,7 @@
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:layout_column="1"
                     android:id="@+id/TempHomeText"
-                    android:text="70"
+                    android:text="701"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:textSize="14sp" />
