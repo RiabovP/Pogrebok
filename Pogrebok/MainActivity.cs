@@ -41,9 +41,6 @@ namespace Pogrebok
                  FindViewById<TextView>(Resource.Id.PricePower).Text = updateData.price_kWt;
                  FindViewById<TextView>(Resource.Id.PressureText).Text = updateData.pressure;
              };
-
-            // Set our view from the "main" layout resource
-            // SetContentView (Resource.Layout.Main);
         }
     }
 }
