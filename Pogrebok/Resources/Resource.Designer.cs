@@ -66,41 +66,50 @@ namespace Pogrebok
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f06001f
-			public const int CountTurnOnText = 2131099679;
-			
-			// aapt resource value: 0x7f060020
-			public const int GetDataButton = 2131099680;
-			
-			// aapt resource value: 0x7f060013
-			public const int PressureText = 2131099667;
-			
-			// aapt resource value: 0x7f06001c
-			public const int PricePower = 2131099676;
-			
-			// aapt resource value: 0x7f06000d
-			public const int TempCellarText = 2131099661;
-			
-			// aapt resource value: 0x7f060010
-			public const int TempHomeText = 2131099664;
+			// aapt resource value: 0x7f060028
+			public const int CountTurnOnText = 2131099688;
 			
 			// aapt resource value: 0x7f060004
-			public const int TempMaxText = 2131099652;
+			public const int DateText = 2131099652;
 			
-			// aapt resource value: 0x7f060007
-			public const int TempMinText = 2131099655;
+			// aapt resource value: 0x7f060029
+			public const int GetDataButton = 2131099689;
 			
-			// aapt resource value: 0x7f06000a
-			public const int TempStreetText = 2131099658;
+			// aapt resource value: 0x7f060010
+			public const int PressureText = 2131099664;
+			
+			// aapt resource value: 0x7f060025
+			public const int PricePower = 2131099685;
 			
 			// aapt resource value: 0x7f060019
-			public const int TimePowerText = 2131099673;
+			public const int TempCellarText = 2131099673;
+			
+			// aapt resource value: 0x7f06000a
+			public const int TempHomeText = 2131099658;
+			
+			// aapt resource value: 0x7f060013
+			public const int TempMaxText = 2131099667;
+			
+			// aapt resource value: 0x7f060016
+			public const int TempMinText = 2131099670;
+			
+			// aapt resource value: 0x7f06000d
+			public const int TempStreetText = 2131099661;
+			
+			// aapt resource value: 0x7f06001f
+			public const int TimePowerText = 2131099679;
+			
+			// aapt resource value: 0x7f060007
+			public const int TimeText = 2131099655;
+			
+			// aapt resource value: 0x7f06001c
+			public const int WarmTurnText = 2131099676;
 			
 			// aapt resource value: 0x7f060000
 			public const int hscroll = 2131099648;
 			
-			// aapt resource value: 0x7f060016
-			public const int kwtFullText = 2131099670;
+			// aapt resource value: 0x7f060022
+			public const int kwtFullText = 2131099682;
 			
 			// aapt resource value: 0x7f060001
 			public const int tableLayout1 = 2131099649;
@@ -110,6 +119,15 @@ namespace Pogrebok
 			
 			// aapt resource value: 0x7f06001d
 			public const int tableRow10 = 2131099677;
+			
+			// aapt resource value: 0x7f060020
+			public const int tableRow11 = 2131099680;
+			
+			// aapt resource value: 0x7f060023
+			public const int tableRow12 = 2131099683;
+			
+			// aapt resource value: 0x7f060026
+			public const int tableRow13 = 2131099686;
 			
 			// aapt resource value: 0x7f060005
 			public const int tableRow2 = 2131099653;
@@ -140,6 +158,15 @@ namespace Pogrebok
 			
 			// aapt resource value: 0x7f06001e
 			public const int textView11 = 2131099678;
+			
+			// aapt resource value: 0x7f060021
+			public const int textView12 = 2131099681;
+			
+			// aapt resource value: 0x7f060024
+			public const int textView13 = 2131099684;
+			
+			// aapt resource value: 0x7f060027
+			public const int textView14 = 2131099687;
 			
 			// aapt resource value: 0x7f060003
 			public const int textView2 = 2131099651;

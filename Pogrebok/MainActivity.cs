@@ -2,6 +2,8 @@
 using Android.Widget;
 using Android.OS;
 using Shared;
+using Android.Text.Format;
+using System;
 
 namespace Pogrebok
 {
@@ -13,6 +15,8 @@ namespace Pogrebok
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.Main);
 
+            //Time time = new Time(Time.CurrentTimezone);
+            DateTime time = DateTime.Now;
             PogrebokV1 pogreb = Core.GetPogrebokData().Result;
 
             FindViewById<TextView>(Resource.Id.TempMaxText).Text = pogreb.street_temp_max;
@@ -25,10 +29,13 @@ namespace Pogrebok
             FindViewById<TextView>(Resource.Id.CountTurnOnText).Text = pogreb.count_tarn;
             FindViewById<TextView>(Resource.Id.PricePower).Text = pogreb.price_kWt;
             FindViewById<TextView>(Resource.Id.PressureText).Text = pogreb.pressure;
+            FindViewById<TextView>(Resource.Id.DateText).Text = time.ToString("d");
+            FindViewById<TextView>(Resource.Id.TimeText).Text = time.ToString("T");
 
             Button button = FindViewById<Button>(Resource.Id.GetDataButton);
             button.Click += delegate
              {
+                 DateTime time_refresh = DateTime.Now;
                  PogrebokV1 updateData = Core.GetPogrebokData().Result;
                  FindViewById<TextView>(Resource.Id.TempMaxText).Text = updateData.street_temp_max;
                  FindViewById<TextView>(Resource.Id.TempMinText).Text = updateData.street_temp_min;
@@ -40,6 +47,8 @@ namespace Pogrebok
                  FindViewById<TextView>(Resource.Id.CountTurnOnText).Text = updateData.count_tarn;
                  FindViewById<TextView>(Resource.Id.PricePower).Text = updateData.price_kWt;
                  FindViewById<TextView>(Resource.Id.PressureText).Text = updateData.pressure;
+                 FindViewById<TextView>(Resource.Id.DateText).Text = time_refresh.ToString("d");
+                 FindViewById<TextView>(Resource.Id.TimeText).Text = time_refresh.ToString("T");
              };
         }
     }
