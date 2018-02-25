@@ -13,373 +13,380 @@
         android:layout_marginBottom="15dp"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="40dp" />
+  <ScrollView
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/scrollView1">
     <HorizontalScrollView
         android:id="@+id/hscroll"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_marginBottom="0.0dp">
-        <TableLayout
-            android:minWidth="25px"
-            android:minHeight="25px"
+      <TableLayout
+          android:minWidth="25px"
+          android:minHeight="25px"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/tableLayout1">
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_marginBottom="7dp">
+          <TextView
+              android:text="Дата:"
+              android:textAppearance="?android:attr/textAppearanceMedium"
+              android:layout_column="0"
+              android:id="@+id/textView2"
+              android:layout_marginLeft="10dp"
+              android:textSize="15sp" />
+          <TextView
+              android:textAppearance="?android:attr/textAppearanceMedium"
+              android:layout_column="1"
+              android:id="@+id/DateText"
+              android:text="31,12,2018"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="10dp"
+              android:textSize="15sp" />
+          <TextView
+              android:textAppearance="?android:attr/textAppearanceMedium"
+              android:layout_column="2"
+              android:text=""
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="10dp"
+              android:textSize="15sp" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_marginBottom="7dp">
+          <TextView
+              android:text="Время:"
+              android:textAppearance="?android:attr/textAppearanceMedium"
+              android:layout_column="0"
+              android:id="@+id/textView3"
+              android:layout_marginLeft="10dp"
+              android:textSize="15sp" />
+          <TextView
+              android:textAppearance="?android:attr/textAppearanceMedium"
+              android:layout_column="1"
+              android:id="@+id/TimeText"
+              android:text="70"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="10dp"
+              android:textSize="15sp" />
+          <TextView
+              android:textAppearance="?android:attr/textAppearanceMedium"
+              android:layout_column="2"
+              android:text=""
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="10dp"
+              android:textSize="15sp" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_marginBottom="20dp">
+          <TextView
+              android:text="Температура в квартире:"
+              android:textAppearance="?android:attr/textAppearanceMedium"
+              android:layout_column="0"
+              android:id="@+id/textView4"
+              android:layout_marginLeft="10dp"
+              android:textSize="15sp" />
+          <TextView
+              android:textAppearance="?android:attr/textAppearanceMedium"
+              android:layout_column="1"
+              android:id="@+id/TempHomeText"
+              android:text="70"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="10dp"
+              android:textSize="15sp" />
+          <TextView
+              android:textAppearance="?android:attr/textAppearanceMedium"
+              android:layout_column="2"
+              android:text="C"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="10dp"
+              android:textSize="15sp" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow4"
+            android:layout_marginBottom="7dp">
+          <TextView
+              android:text="Температура на улице:"
+              android:textAppearance="?android:attr/textAppearanceMedium"
+              android:layout_column="0"
+              android:id="@+id/textView5"
+              android:layout_marginLeft="10dp"
+              android:textSize="15sp" />
+          <TextView
+              android:textAppearance="?android:attr/textAppearanceMedium"
+              android:layout_column="1"
+              android:id="@+id/TempStreetText"
+              android:text="70"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="10dp"
+              android:textSize="15sp" />
+          <TextView
+              android:textAppearance="?android:attr/textAppearanceMedium"
+              android:layout_column="2"
+              android:text="C"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="10dp"
+              android:textSize="15sp" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow5"
+            android:layout_marginBottom="7dp">
+          <TextView
+              android:text="Атм. давление:"
+              android:textAppearance="?android:attr/textAppearanceMedium"
+              android:layout_column="0"
+              android:id="@+id/textView6"
+              android:layout_marginLeft="10dp"
+              android:textSize="15sp" />
+          <TextView
+              android:textAppearance="?android:attr/textAppearanceMedium"
+              android:layout_column="1"
+              android:id="@+id/PressureText"
+              android:text="70"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="10dp"
+              android:textSize="15sp" />
+          <TextView
+              android:textAppearance="?android:attr/textAppearanceMedium"
+              android:layout_column="2"
+              android:text="мм"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="10dp"
+              android:textSize="15sp" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow6"
+            android:layout_marginBottom="7dp">
+          <TextView
+              android:text="Температура на улице max:"
+              android:textAppearance="?android:attr/textAppearanceMedium"
+              android:layout_column="0"
+              android:id="@+id/textView7"
+              android:layout_marginLeft="10dp"
+              android:textSize="15sp" />
+          <TextView
+              android:textAppearance="?android:attr/textAppearanceMedium"
+              android:layout_column="1"
+              android:id="@+id/TempMaxText"
+              android:text="70"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="10dp"
+              android:textSize="15sp" />
+          <TextView
+              android:textAppearance="?android:attr/textAppearanceMedium"
+              android:layout_column="2"
+              android:text="C"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="10dp"
+              android:textSize="15sp" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow7"
+            android:layout_marginBottom="20dp">
+          <TextView
+              android:text="Температура на улице min:"
+              android:textAppearance="?android:attr/textAppearanceMedium"
+              android:layout_column="0"
+              android:id="@+id/textView8"
+              android:layout_marginLeft="10dp"
+              android:textSize="15sp" />
+          <TextView
+              android:textAppearance="?android:attr/textAppearanceMedium"
+              android:layout_column="1"
+              android:id="@+id/TempMinText"
+              android:text="70"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="10dp"
+              android:textSize="15sp" />
+          <TextView
+              android:textAppearance="?android:attr/textAppearanceMedium"
+              android:layout_column="2"
+              android:text="C"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="10dp"
+              android:textSize="15sp" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow8"
+            android:layout_marginBottom="7dp">
+          <TextView
+              android:text="Температура в погребке:"
+              android:textAppearance="?android:attr/textAppearanceMedium"
+              android:layout_column="0"
+              android:id="@+id/textView9"
+              android:layout_marginLeft="10dp"
+              android:textSize="15sp" />
+          <TextView
+              android:textAppearance="?android:attr/textAppearanceMedium"
+              android:layout_column="1"
+              android:id="@+id/TempCellarText"
+              android:text="70"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="10dp"
+              android:textSize="15sp" />
+          <TextView
+              android:textAppearance="?android:attr/textAppearanceMedium"
+              android:layout_column="2"
+              android:text="C"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="10dp"
+              android:textSize="15sp" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow9"
+            android:layout_marginBottom="7dp">
+          <TextView
+              android:text="Подогрев:"
+              android:textAppearance="?android:attr/textAppearanceMedium"
+              android:layout_column="0"
+              android:id="@+id/textView10"
+              android:layout_marginLeft="10dp"
+              android:textSize="15sp" />
+          <TextView
+              android:textAppearance="?android:attr/textAppearanceMedium"
+              android:layout_column="1"
+              android:id="@+id/WarmTurnText"
+              android:text="Выкл"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="10dp"
+              android:textSize="15sp"
+              android:textColor="#008000" />
+          <TextView
+              android:textAppearance="?android:attr/textAppearanceMedium"
+              android:layout_column="2"
+              android:text=""
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="10dp"
+              android:textSize="15sp" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow10"
+            android:layout_marginBottom="7dp">
+          <TextView
+              android:text="Время работы отопления:"
+              android:textAppearance="?android:attr/textAppearanceMedium"
+              android:layout_column="0"
+              android:id="@+id/textView11"
+              android:layout_marginLeft="10dp"
+              android:textSize="15sp" />
+          <TextView
+              android:textAppearance="?android:attr/textAppearanceMedium"
+              android:layout_column="1"
+              android:id="@+id/TimePowerText"
+              android:text="18804.55"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="10dp"
+              android:textColor="@android:color/holo_red_dark"
+              android:textSize="15sp" />
+          <TextView
+              android:textAppearance="?android:attr/textAppearanceMedium"
+              android:layout_column="2"
+              android:text="мин"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="10dp"
+              android:textColor="@android:color/holo_red_dark"
+              android:textSize="15sp" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow11"
+            android:layout_marginBottom="7dp">
+          <TextView
+              android:text="Расход эл.энергии:"
+              android:textAppearance="?android:attr/textAppearanceMedium"
+              android:layout_column="0"
+              android:id="@+id/textView12"
+              android:layout_marginLeft="10dp"
+              android:textSize="15sp" />
+          <TextView
+              android:textAppearance="?android:attr/textAppearanceMedium"
+              android:layout_column="1"
+              android:id="@+id/kwtFullText"
+              android:text="70"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="10dp"
+              android:textColor="@android:color/holo_red_dark"
+              android:textSize="15sp" />
+          <TextView
+              android:textAppearance="?android:attr/textAppearanceMedium"
+              android:layout_column="2"
+              android:text="кВт.ч"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="10dp"
+              android:textColor="@android:color/holo_red_dark"
+              android:textSize="15sp" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow12"
+            android:layout_marginBottom="20dp">
+          <TextView
+              android:text="Стоимость эл.энергии:"
+              android:textAppearance="?android:attr/textAppearanceMedium"
+              android:layout_column="0"
+              android:id="@+id/textView13"
+              android:layout_marginLeft="10dp"
+              android:textSize="15sp" />
+          <TextView
+              android:textAppearance="?android:attr/textAppearanceMedium"
+              android:layout_column="1"
+              android:id="@+id/PricePower"
+              android:text="70"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="10dp"
+              android:textColor="@android:color/holo_red_dark"
+              android:textSize="15sp" />
+          <TextView
+              android:textAppearance="?android:attr/textAppearanceMedium"
+              android:layout_column="2"
+              android:text="руб"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="10dp"
+              android:textColor="@android:color/holo_red_dark"
+              android:textSize="15sp" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow13"
+            android:layout_marginBottom="20dp">
+          <TextView
+              android:text="Количество включений:"
+              android:textAppearance="?android:attr/textAppearanceMedium"
+              android:layout_column="0"
+              android:id="@+id/textView14"
+              android:layout_marginLeft="10dp"
+              android:textSize="15sp" />
+          <TextView
+              android:textAppearance="?android:attr/textAppearanceMedium"
+              android:layout_column="1"
+              android:id="@+id/CountTurnOnText"
+              android:text="70"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="10dp"
+              android:textSize="15sp"
+              android:textColor="#800080" />
+          <TextView
+              android:textAppearance="?android:attr/textAppearanceMedium"
+              android:layout_column="2"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="10dp"
+              android:textSize="15sp" />
+        </TableRow>
+        <Button
+            android:text="Обновить"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/tableLayout1">
-            <TableRow
-                android:id="@+id/tableRow1"
-                android:layout_marginBottom="7dp">
-                <TextView
-                    android:text="Дата:"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_column="0"
-                    android:id="@+id/textView2"
-                    android:layout_marginLeft="10dp"
-                    android:textSize="15sp" />
-                <TextView
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_column="1"
-                    android:id="@+id/DateText"
-                    android:text="70"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:textSize="15sp" />
-                <TextView
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_column="2"
-                    android:text=""
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:textSize="15sp" />
-            </TableRow>
-            <TableRow
-                android:id="@+id/tableRow2"
-                android:layout_marginBottom="7dp">
-                <TextView
-                    android:text="Время:"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_column="0"
-                    android:id="@+id/textView3"
-                    android:layout_marginLeft="10dp"
-                    android:textSize="15sp" />
-                <TextView
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_column="1"
-                    android:id="@+id/TimeText"
-                    android:text="70"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:textSize="15sp" />
-                <TextView
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_column="2"
-                    android:text=""
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:textSize="15sp" />
-            </TableRow>
-            <TableRow
-                android:id="@+id/tableRow3"
-                android:layout_marginBottom="20dp">
-                <TextView
-                    android:text="Температура в квартире:"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_column="0"
-                    android:id="@+id/textView4"
-                    android:layout_marginLeft="10dp"
-                    android:textSize="15sp" />
-                <TextView
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_column="1"
-                    android:id="@+id/TempHomeText"
-                    android:text="70"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:textSize="15sp" />
-                <TextView
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_column="2"
-                    android:text="C"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:textSize="15sp" />
-            </TableRow>
-            <TableRow
-                android:id="@+id/tableRow4"
-                android:layout_marginBottom="7dp">
-                <TextView
-                    android:text="Температура на улице:"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_column="0"
-                    android:id="@+id/textView5"
-                    android:layout_marginLeft="10dp"
-                    android:textSize="15sp" />
-                <TextView
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_column="1"
-                    android:id="@+id/TempStreetText"
-                    android:text="70"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:textSize="15sp" />
-                <TextView
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_column="2"
-                    android:text="C"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:textSize="15sp" />
-            </TableRow>
-            <TableRow
-                android:id="@+id/tableRow5"
-                android:layout_marginBottom="7dp">
-                <TextView
-                    android:text="Атм. давление:"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_column="0"
-                    android:id="@+id/textView6"
-                    android:layout_marginLeft="10dp"
-                    android:textSize="15sp" />
-                <TextView
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_column="1"
-                    android:id="@+id/PressureText"
-                    android:text="70"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:textSize="15sp" />
-                <TextView
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_column="2"
-                    android:text="мм"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:textSize="15sp" />
-            </TableRow>
-            <TableRow
-                android:id="@+id/tableRow6"
-                android:layout_marginBottom="7dp">
-                <TextView
-                    android:text="Температура на улице max:"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_column="0"
-                    android:id="@+id/textView7"
-                    android:layout_marginLeft="10dp"
-                    android:textSize="15sp" />
-                <TextView
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_column="1"
-                    android:id="@+id/TempMaxText"
-                    android:text="70"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:textSize="15sp" />
-                <TextView
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_column="2"
-                    android:text="C"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:textSize="15sp" />
-            </TableRow>
-            <TableRow
-                android:id="@+id/tableRow7"
-                android:layout_marginBottom="20dp">
-                <TextView
-                    android:text="Температура на улице min:"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_column="0"
-                    android:id="@+id/textView8"
-                    android:layout_marginLeft="10dp"
-                    android:textSize="15sp" />
-                <TextView
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_column="1"
-                    android:id="@+id/TempMinText"
-                    android:text="70"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:textSize="15sp" />
-                <TextView
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_column="2"
-                    android:text="C"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:textSize="15sp" />
-            </TableRow>
-            <TableRow
-                android:id="@+id/tableRow8"
-                android:layout_marginBottom="7dp">
-                <TextView
-                    android:text="Температура в погребке:"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_column="0"
-                    android:id="@+id/textView9"
-                    android:layout_marginLeft="10dp"
-                    android:textSize="15sp" />
-                <TextView
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_column="1"
-                    android:id="@+id/TempCellarText"
-                    android:text="70"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:textSize="15sp" />
-                <TextView
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_column="2"
-                    android:text="C"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:textSize="15sp" />
-            </TableRow>
-            <TableRow
-                android:id="@+id/tableRow9"
-                android:layout_marginBottom="7dp">
-                <TextView
-                    android:text="Подогрев:"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_column="0"
-                    android:id="@+id/textView10"
-                    android:layout_marginLeft="10dp"
-                    android:textSize="15sp" />
-                <TextView
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_column="1"
-                    android:id="@+id/WarmTurnText"
-                    android:text="Выкл"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:textSize="15sp"
-                    android:textColor="#008000" />
-                <TextView
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_column="2"
-                    android:text=""
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:textSize="15sp" />
-            </TableRow>
-            <TableRow
-                android:id="@+id/tableRow10"
-                android:layout_marginBottom="7dp">
-                <TextView
-                    android:text="Время работы отопления:"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_column="0"
-                    android:id="@+id/textView11"
-                    android:layout_marginLeft="10dp"
-                    android:textSize="15sp" />
-                <TextView
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_column="1"
-                    android:id="@+id/TimePowerText"
-                    android:text="18804.55"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:textColor="@android:color/holo_red_dark"
-                    android:textSize="15sp" />
-                <TextView
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_column="2"
-                    android:text="мин"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:textColor="@android:color/holo_red_dark"
-                    android:textSize="15sp" />
-            </TableRow>
-            <TableRow
-                android:id="@+id/tableRow11"
-                android:layout_marginBottom="7dp">
-                <TextView
-                    android:text="Расход эл.энергии:"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_column="0"
-                    android:id="@+id/textView12"
-                    android:layout_marginLeft="10dp"
-                    android:textSize="15sp" />
-                <TextView
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_column="1"
-                    android:id="@+id/kwtFullText"
-                    android:text="70"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:textColor="@android:color/holo_red_dark"
-                    android:textSize="15sp" />
-                <TextView
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_column="2"
-                    android:text="кВт.ч"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:textColor="@android:color/holo_red_dark"
-                    android:textSize="15sp" />
-            </TableRow>
-            <TableRow
-                android:id="@+id/tableRow12"
-                android:layout_marginBottom="20dp">
-                <TextView
-                    android:text="Стоимость эл.энергии:"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_column="0"
-                    android:id="@+id/textView13"
-                    android:layout_marginLeft="10dp"
-                    android:textSize="15sp" />
-                <TextView
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_column="1"
-                    android:id="@+id/PricePower"
-                    android:text="70"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:textColor="@android:color/holo_red_dark"
-                    android:textSize="15sp" />
-                <TextView
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_column="2"
-                    android:text="руб"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:textColor="@android:color/holo_red_dark"
-                    android:textSize="15sp" />
-            </TableRow>
-            <TableRow
-                android:id="@+id/tableRow13"
-                android:layout_marginBottom="20dp">
-                <TextView
-                    android:text="Количество включений:"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_column="0"
-                    android:id="@+id/textView14"
-                    android:layout_marginLeft="10dp"
-                    android:textSize="15sp" />
-                <TextView
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_column="1"
-                    android:id="@+id/CountTurnOnText"
-                    android:text="70"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:textSize="15sp"
-                    android:textColor="#800080" />
-                <TextView
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_column="2"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:textSize="15sp" />
-            </TableRow>
-            <Button
-                android:text="Обновить"
-                android:layout_width="match_parent"
-                android:layout_height="44.5dp"
-                android:id="@+id/GetDataButton"
-                android:layout_centerVertical="true"
-                android:textSize="15sp"
-                android:layout_marginLeft="130dp"
-                android:layout_marginRight="90dp"
-                android:layout_marginTop="10dp"
-                android:drawableBottom="@android:color/holo_blue_light" />
-        </TableLayout>
+            android:layout_height="44.5dp"
+            android:id="@+id/GetDataButton"
+            android:layout_centerVertical="true"
+            android:textSize="15sp"
+            android:layout_marginLeft="130dp"
+            android:layout_marginRight="90dp"
+            android:layout_marginTop="10dp"
+            android:drawableBottom="@android:color/holo_blue_light" />
+      </TableLayout>
     </HorizontalScrollView>
+  </ScrollView>
 </LinearLayout>

@@ -31,6 +31,7 @@ namespace Pogrebok
             FindViewById<TextView>(Resource.Id.PressureText).Text = pogreb.pressure;
             FindViewById<TextView>(Resource.Id.DateText).Text = time.ToString("d");
             FindViewById<TextView>(Resource.Id.TimeText).Text = time.ToString("T");
+            //FindViewById<TextView>(Resource.Id.TimeText).Text = "";
 
             Button button = FindViewById<Button>(Resource.Id.GetDataButton);
             button.Click += delegate
