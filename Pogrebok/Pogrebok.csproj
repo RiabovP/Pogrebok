@@ -95,7 +95,7 @@
     <AndroidResource Include="Resources\drawable\icon_pog.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout-small\Main.xml">
+    <AndroidResource Include="Resources\layout-ldpi\Main.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
