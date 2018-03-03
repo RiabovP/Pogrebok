@@ -13,7 +13,8 @@
         android:layout_marginBottom="15dp"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="15dp"
-        android:layout_marginRight="10dp" />
+        android:layout_marginRight="10dp"
+        android:id="@+id/text_header" />
     <ScrollView
         android:minWidth="25px"
         android:minHeight="25px"

@@ -4,12 +4,16 @@ using Android.OS;
 using Shared;
 using Android.Text.Format;
 using System;
+using Java;
+using Android;
+using Android.Graphics;
 
 namespace Pogrebok
 {
     [Activity(Theme = "@style/Theme.MainPage")]
     public class MainActivity : Activity
     {
+        //private string mgr;
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
@@ -18,6 +22,9 @@ namespace Pogrebok
             //Time time = new Time(Time.CurrentTimezone);
             DateTime time = DateTime.Now;
             PogrebokV1 pogreb = Core.GetPogrebokData().Result;
+            
+            TextView NewFont = (TextView)FindViewById<TextView>(Resource.Id.text_header);
+            NewFont.SetTypeface(Typeface.CreateFromAsset(BaseContext.ApplicationContext.Assets, "Fonts/micra_Font.ttf"), TypefaceStyle.Normal);
 
             FindViewById<TextView>(Resource.Id.TempMaxText).Text = pogreb.street_temp_max;
             FindViewById<TextView>(Resource.Id.TempMinText).Text = pogreb.street_temp_min;

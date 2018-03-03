@@ -64,6 +64,7 @@
     <Compile Include="Splash.cs" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="Assets\Fonts\micra_Font.ttf" />
     <None Include="GettingStarted.Xamarin" />
     <None Include="packages.config" />
     <None Include="Resources\AboutResources.txt" />
