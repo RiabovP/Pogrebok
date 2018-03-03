@@ -6,6 +6,7 @@
   </style>
   <style name="Theme.MainPage" parent="android:Theme.Holo.Light">
     <item name="android:windowNoTitle">true</item>
+    <item name="android:fontFamily">font/micra_Font.ttf</item>
   </style>
   
 </resources>

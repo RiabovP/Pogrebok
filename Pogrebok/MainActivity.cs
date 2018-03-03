@@ -23,8 +23,10 @@ namespace Pogrebok
             DateTime time = DateTime.Now;
             PogrebokV1 pogreb = Core.GetPogrebokData().Result;
             
-            TextView NewFont = (TextView)FindViewById<TextView>(Resource.Id.text_header);
-            NewFont.SetTypeface(Typeface.CreateFromAsset(BaseContext.ApplicationContext.Assets, "Fonts/micra_Font.ttf"), TypefaceStyle.Normal);
+            TextView NewFont = FindViewById<TextView>(Resource.Id.text_header);
+            //Typeface tf = Typeface.CreateFromAsset(BaseContext.ApplicationContext.Assets, "Fonts/micra.ttf");
+            Typeface tf = Typeface.CreateFromAsset(BaseContext.Assets, "Fonts/micra.ttf");
+            NewFont.SetTypeface(tf, TypefaceStyle.Normal);
 
             FindViewById<TextView>(Resource.Id.TempMaxText).Text = pogreb.street_temp_max;
             FindViewById<TextView>(Resource.Id.TempMinText).Text = pogreb.street_temp_min;
