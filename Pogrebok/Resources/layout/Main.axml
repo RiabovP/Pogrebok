@@ -10,11 +10,16 @@
         android:layout_height="wrap_content"
         android:text="Программа контроля температуры в погребе"
         android:textSize="17sp"
-        android:layout_marginBottom="15dp"
+        android:layout_marginBottom="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="10dp"
         android:id="@+id/text_header" />
+  <View
+    android:layout_width="wrap_content"
+    android:background="@drawable/separator"
+    android:layout_height="3dp"
+    android:layout_marginBottom="10dp" />
     <ScrollView
         android:minWidth="25px"
         android:minHeight="25px"
@@ -87,7 +92,7 @@
                 </TableRow>
                 <TableRow
                     android:id="@+id/tableRow3"
-                    android:layout_marginBottom="20dp">
+                    android:layout_marginBottom="7dp">
                     <TextView
                         android:text="Температура в квартире:"
                         android:textAppearance="?android:attr/textAppearanceMedium"
@@ -111,6 +116,11 @@
                         android:layout_marginLeft="10dp"
                         android:textSize="13sp" />
                 </TableRow>
+                <View
+                    android:layout_width="wrap_content"
+                    android:background="@drawable/separator"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="7dp" />
                 <TableRow
                     android:id="@+id/tableRow4"
                     android:layout_marginBottom="7dp">
@@ -191,7 +201,7 @@
                 </TableRow>
                 <TableRow
                     android:id="@+id/tableRow7"
-                    android:layout_marginBottom="20dp">
+                    android:layout_marginBottom="7dp">
                     <TextView
                         android:text="Температура на улице min:"
                         android:textAppearance="?android:attr/textAppearanceMedium"
@@ -215,6 +225,11 @@
                         android:layout_marginLeft="10dp"
                         android:textSize="13sp" />
                 </TableRow>
+                <View
+                    android:layout_width="wrap_content"
+                    android:background="@drawable/separator"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="7dp" />
                 <TableRow
                     android:id="@+id/tableRow8"
                     android:layout_marginBottom="7dp">
@@ -326,7 +341,7 @@
                 </TableRow>
                 <TableRow
                     android:id="@+id/tableRow12"
-                    android:layout_marginBottom="20dp">
+                    android:layout_marginBottom="7dp">
                     <TextView
                         android:text="Стоимость эл.энергии:"
                         android:textAppearance="?android:attr/textAppearanceMedium"
@@ -352,6 +367,11 @@
                         android:textColor="@android:color/holo_red_dark"
                         android:textSize="13sp" />
                 </TableRow>
+                <View
+                    android:layout_width="wrap_content"
+                    android:background="@drawable/separator"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="7dp" />
                 <TableRow
                     android:id="@+id/tableRow13"
                     android:layout_marginBottom="20dp">
