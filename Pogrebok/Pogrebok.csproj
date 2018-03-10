@@ -104,10 +104,10 @@
     <AndroidResource Include="Resources\layout-large\Main.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rectangle.svg" />
+    <AndroidResource Include="Resources\drawable\separator.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\separator.xml" />
+    <AndroidResource Include="Resources\drawable\buttons.xml" />
   </ItemGroup>
   <Import Project="..\Shared\Shared.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

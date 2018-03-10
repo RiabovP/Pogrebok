@@ -43,6 +43,8 @@ namespace Pogrebok
             //FindViewById<TextView>(Resource.Id.TimeText).Text = "";
 
             Button button = FindViewById<Button>(Resource.Id.GetDataButton);
+            Typeface btf = Typeface.CreateFromAsset(BaseContext.Assets, "Fonts/micra.ttf");
+            button.SetTypeface(btf, TypefaceStyle.Normal);
             button.Click += delegate
              {
                  DateTime time_refresh = DateTime.Now;

@@ -15,11 +15,11 @@
         android:layout_marginLeft="15dp"
         android:layout_marginRight="10dp"
         android:id="@+id/text_header" />
-  <View
-    android:layout_width="wrap_content"
-    android:background="@drawable/separator"
-    android:layout_height="3dp"
-    android:layout_marginBottom="10dp" />
+    <View
+        android:layout_width="wrap_content"
+        android:background="@drawable/separator"
+        android:layout_height="3dp"
+        android:layout_marginBottom="10dp" />
     <ScrollView
         android:minWidth="25px"
         android:minHeight="25px"
@@ -405,10 +405,12 @@
                     android:id="@+id/GetDataButton"
                     android:layout_centerVertical="true"
                     android:textSize="15sp"
-                    android:layout_marginLeft="120dp"
-                    android:layout_marginRight="100dp"
+                    android:layout_marginLeft="105dp"
+                    android:layout_marginRight="70dp"
                     android:layout_marginTop="10dp"
-                    android:drawableBottom="@android:color/holo_blue_light" />
+                    android:drawableBottom="@android:color/holo_blue_light"
+                    android:background="@drawable/buttons"
+                    android:shadowColor="#ff419e5a" />
             </TableLayout>
         </HorizontalScrollView>
     </ScrollView>
