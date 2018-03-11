@@ -8,7 +8,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Программа контроля температуры в погребе"
+        android:text="Контроль температуры в погребе"
         android:textSize="17sp"
         android:layout_marginBottom="10dp"
         android:layout_marginTop="10dp"
@@ -37,7 +37,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/tableLayout1"
-                android:layout_marginLeft="20dp">
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginRight="20dp">
                 <TableRow
                     android:id="@+id/tableRow1"
                     android:layout_marginBottom="7dp">
@@ -404,13 +406,13 @@
                     android:layout_height="44.5dp"
                     android:id="@+id/GetDataButton"
                     android:layout_centerVertical="true"
-                    android:textSize="15sp"
-                    android:layout_marginLeft="105dp"
-                    android:layout_marginRight="70dp"
+                    android:textSize="13sp"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginRight="95dp"
                     android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
                     android:drawableBottom="@android:color/holo_blue_light"
-                    android:background="@drawable/buttons"
-                    android:shadowColor="#ff419e5a" />
+                    android:background="@drawable/buttons" />
             </TableLayout>
         </HorizontalScrollView>
     </ScrollView>
