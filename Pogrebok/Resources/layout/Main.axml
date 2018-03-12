@@ -38,11 +38,11 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/tableLayout1"
                 android:layout_marginLeft="20dp"
-                android:layout_marginBottom="20dp"
-                android:layout_marginRight="20dp">
+                android:layout_marginBottom="20dp">
                 <TableRow
                     android:id="@+id/tableRow1"
-                    android:layout_marginBottom="7dp">
+                    android:layout_marginBottom="7dp"
+                    android:layout_marginRight="20dp">
                     <TextView
                         android:text="Дата:"
                         android:textAppearance="?android:attr/textAppearanceMedium"
@@ -68,7 +68,8 @@
                 </TableRow>
                 <TableRow
                     android:id="@+id/tableRow2"
-                    android:layout_marginBottom="7dp">
+                    android:layout_marginBottom="7dp"
+                    android:layout_marginRight="20dp">
                     <TextView
                         android:text="Время:"
                         android:textAppearance="?android:attr/textAppearanceMedium"
@@ -94,7 +95,8 @@
                 </TableRow>
                 <TableRow
                     android:id="@+id/tableRow3"
-                    android:layout_marginBottom="7dp">
+                    android:layout_marginBottom="7dp"
+                    android:layout_marginRight="20dp">
                     <TextView
                         android:text="Температура в квартире:"
                         android:textAppearance="?android:attr/textAppearanceMedium"
@@ -125,7 +127,8 @@
                     android:layout_marginBottom="7dp" />
                 <TableRow
                     android:id="@+id/tableRow4"
-                    android:layout_marginBottom="7dp">
+                    android:layout_marginBottom="7dp"
+                    android:layout_marginRight="20dp">
                     <TextView
                         android:text="Температура на улице:"
                         android:textAppearance="?android:attr/textAppearanceMedium"
@@ -151,7 +154,8 @@
                 </TableRow>
                 <TableRow
                     android:id="@+id/tableRow5"
-                    android:layout_marginBottom="7dp">
+                    android:layout_marginBottom="7dp"
+                    android:layout_marginRight="20dp">
                     <TextView
                         android:text="Атм. давление:"
                         android:textAppearance="?android:attr/textAppearanceMedium"
@@ -177,7 +181,8 @@
                 </TableRow>
                 <TableRow
                     android:id="@+id/tableRow6"
-                    android:layout_marginBottom="7dp">
+                    android:layout_marginBottom="7dp"
+                    android:layout_marginRight="20dp">
                     <TextView
                         android:text="Температура на улице max:"
                         android:textAppearance="?android:attr/textAppearanceMedium"
@@ -203,7 +208,8 @@
                 </TableRow>
                 <TableRow
                     android:id="@+id/tableRow7"
-                    android:layout_marginBottom="7dp">
+                    android:layout_marginBottom="7dp"
+                    android:layout_marginRight="20dp">
                     <TextView
                         android:text="Температура на улице min:"
                         android:textAppearance="?android:attr/textAppearanceMedium"
@@ -234,7 +240,8 @@
                     android:layout_marginBottom="7dp" />
                 <TableRow
                     android:id="@+id/tableRow8"
-                    android:layout_marginBottom="7dp">
+                    android:layout_marginBottom="7dp"
+                    android:layout_marginRight="20dp">
                     <TextView
                         android:text="Температура в погребке:"
                         android:textAppearance="?android:attr/textAppearanceMedium"
@@ -260,7 +267,8 @@
                 </TableRow>
                 <TableRow
                     android:id="@+id/tableRow9"
-                    android:layout_marginBottom="7dp">
+                    android:layout_marginBottom="7dp"
+                    android:layout_marginRight="20dp">
                     <TextView
                         android:text="Подогрев:"
                         android:textAppearance="?android:attr/textAppearanceMedium"
@@ -287,7 +295,8 @@
                 </TableRow>
                 <TableRow
                     android:id="@+id/tableRow10"
-                    android:layout_marginBottom="7dp">
+                    android:layout_marginBottom="7dp"
+                    android:layout_marginRight="20dp">
                     <TextView
                         android:text="Время работы отопления:"
                         android:textAppearance="?android:attr/textAppearanceMedium"
@@ -315,7 +324,8 @@
                 </TableRow>
                 <TableRow
                     android:id="@+id/tableRow11"
-                    android:layout_marginBottom="7dp">
+                    android:layout_marginBottom="7dp"
+                    android:layout_marginRight="20dp">
                     <TextView
                         android:text="Расход эл.энергии:"
                         android:textAppearance="?android:attr/textAppearanceMedium"
@@ -343,7 +353,8 @@
                 </TableRow>
                 <TableRow
                     android:id="@+id/tableRow12"
-                    android:layout_marginBottom="7dp">
+                    android:layout_marginBottom="7dp"
+                    android:layout_marginRight="20dp">
                     <TextView
                         android:text="Стоимость эл.энергии:"
                         android:textAppearance="?android:attr/textAppearanceMedium"
@@ -376,7 +387,8 @@
                     android:layout_marginBottom="7dp" />
                 <TableRow
                     android:id="@+id/tableRow13"
-                    android:layout_marginBottom="20dp">
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginRight="20dp">
                     <TextView
                         android:text="Количество включений:"
                         android:textAppearance="?android:attr/textAppearanceMedium"
