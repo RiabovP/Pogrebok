@@ -1,5 +1,6 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
+  <!--<color name="theme_mainpage_background">@android:color/holo_green_light</color>-->
   <style name="Theme.Splash" parent="android:Theme">
     <item name="android:windowBackground">@drawable/pogrebokSplash</item>
     <item name="android:windowNoTitle">true</item>
@@ -7,6 +8,7 @@
   <style name="Theme.MainPage" parent="android:Theme.Holo.Light">
     <item name="android:windowNoTitle">true</item>
     <item name="android:fontFamily">font/micra_Font.ttf</item>
+  <!--<item name="android:colorBackground">@color/theme_mainpage_background</item><item name="android:windowBackground">?android:attr/colorBackground</item>-->
   </style>
   
 </resources>

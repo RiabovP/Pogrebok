@@ -14,7 +14,8 @@
         android:layout_marginTop="10dp"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="10dp"
-        android:id="@+id/text_header" />
+        android:id="@+id/text_header"
+        android:layout_gravity="center_horizontal" />
     <View
         android:layout_width="wrap_content"
         android:background="@drawable/separator"
@@ -38,7 +39,8 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/tableLayout1"
                 android:layout_marginLeft="20dp"
-                android:layout_marginBottom="20dp">
+                android:layout_marginBottom="20dp"
+                android:layout_marginRight="18.0dp">
                 <TableRow
                     android:id="@+id/tableRow1"
                     android:layout_marginBottom="7dp"
@@ -318,7 +320,7 @@
                         android:layout_column="2"
                         android:text="мин"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
+                        android:layout_marginLeft="10.0dp"
                         android:textColor="@android:color/holo_red_dark"
                         android:textSize="13sp" />
                 </TableRow>
@@ -414,17 +416,19 @@
                 </TableRow>
                 <Button
                     android:text="Обновить"
-                    android:layout_width="match_parent"
-                    android:layout_height="44.5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:id="@+id/GetDataButton"
                     android:layout_centerVertical="true"
                     android:textSize="13sp"
-                    android:layout_marginLeft="100dp"
-                    android:layout_marginRight="95dp"
                     android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:drawableBottom="@android:color/holo_blue_light"
-                    android:background="@drawable/buttons" />
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/buttons"
+                    android:elevation="10dp"
+                    android:translationZ="1dp"
+                    android:stateListAnimator="@null"
+                    android:layout_marginRight="100dp"
+                    android:layout_marginLeft="100dp" />
             </TableLayout>
         </HorizontalScrollView>
     </ScrollView>

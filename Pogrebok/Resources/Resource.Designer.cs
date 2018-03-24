@@ -45,19 +45,31 @@ namespace Pogrebok
 		{
 			
 			// aapt resource value: 0x7f020000
-			public const int buttons = 2130837504;
+			public const int ButtonNormal = 2130837504;
 			
 			// aapt resource value: 0x7f020001
-			public const int Icon = 2130837505;
+			public const int ButtonPressed = 2130837505;
 			
 			// aapt resource value: 0x7f020002
-			public const int icon_pog = 2130837506;
+			public const int buttons = 2130837506;
 			
 			// aapt resource value: 0x7f020003
-			public const int pogrebokSplash = 2130837507;
+			public const int Icon = 2130837507;
 			
 			// aapt resource value: 0x7f020004
-			public const int separator = 2130837508;
+			public const int icon_pog = 2130837508;
+			
+			// aapt resource value: 0x7f020005
+			public const int NewButtons = 2130837509;
+			
+			// aapt resource value: 0x7f020006
+			public const int pogrebokSplash = 2130837510;
+			
+			// aapt resource value: 0x7f020007
+			public const int separator = 2130837511;
+			
+			// aapt resource value: 0x7f020008
+			public const int TileSeparator = 2130837512;
 			
 			static Drawable()
 			{
@@ -81,23 +93,50 @@ namespace Pogrebok
 			// aapt resource value: 0x7f06002b
 			public const int GetDataButton = 2131099691;
 			
+			// aapt resource value: 0x7f060032
+			public const int Pressure = 2131099698;
+			
 			// aapt resource value: 0x7f060012
 			public const int PressureText = 2131099666;
+			
+			// aapt resource value: 0x7f060035
+			public const int PriceEE = 2131099701;
 			
 			// aapt resource value: 0x7f060027
 			public const int PricePower = 2131099687;
 			
+			// aapt resource value: 0x7f060033
+			public const int RashodEE = 2131099699;
+			
+			// aapt resource value: 0x7f060037
+			public const int Refresh = 2131099703;
+			
 			// aapt resource value: 0x7f06001b
 			public const int TempCellarText = 2131099675;
+			
+			// aapt resource value: 0x7f06002d
+			public const int TempHome = 2131099693;
 			
 			// aapt resource value: 0x7f06000c
 			public const int TempHomeText = 2131099660;
 			
+			// aapt resource value: 0x7f060030
+			public const int TempMax = 2131099696;
+			
 			// aapt resource value: 0x7f060015
 			public const int TempMaxText = 2131099669;
 			
+			// aapt resource value: 0x7f060031
+			public const int TempMin = 2131099697;
+			
 			// aapt resource value: 0x7f060018
 			public const int TempMinText = 2131099672;
+			
+			// aapt resource value: 0x7f06002f
+			public const int TempPogrebok = 2131099695;
+			
+			// aapt resource value: 0x7f06002e
+			public const int TempStreet = 2131099694;
 			
 			// aapt resource value: 0x7f06000f
 			public const int TempStreetText = 2131099663;
@@ -108,8 +147,20 @@ namespace Pogrebok
 			// aapt resource value: 0x7f060009
 			public const int TimeText = 2131099657;
 			
+			// aapt resource value: 0x7f060034
+			public const int TimeWarm = 2131099700;
+			
 			// aapt resource value: 0x7f06001e
 			public const int WarmTurnText = 2131099678;
+			
+			// aapt resource value: 0x7f060038
+			public const int button12 = 2131099704;
+			
+			// aapt resource value: 0x7f060036
+			public const int countTurnOn = 2131099702;
+			
+			// aapt resource value: 0x7f06002c
+			public const int horizontalScrollView1 = 2131099692;
 			
 			// aapt resource value: 0x7f060002
 			public const int hscroll = 2131099650;
@@ -219,6 +270,9 @@ namespace Pogrebok
 			
 			// aapt resource value: 0x7f030000
 			public const int Main = 2130903040;
+			
+			// aapt resource value: 0x7f030001
+			public const int MainTiles = 2130903041;
 			
 			static Layout()
 			{
