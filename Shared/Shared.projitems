@@ -9,8 +9,11 @@
     <Import_RootNamespace>Shared</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)Core.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)DataService.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)PogrebokV1.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Pogreb\Core.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Pogreb\DataService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Pogreb\PogrebokV1.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Weather\CoreWeather.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Weather\Weather.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Weather\WeatherDay.cs" />
   </ItemGroup>
 </Project>

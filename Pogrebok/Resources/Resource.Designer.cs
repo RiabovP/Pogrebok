@@ -90,6 +90,66 @@ namespace Pogrebok
 			// aapt resource value: 0x7f060006
 			public const int DateText = 2131099654;
 			
+			// aapt resource value: 0x7f060052
+			public const int Date_0 = 2131099730;
+			
+			// aapt resource value: 0x7f060053
+			public const int Date_1 = 2131099731;
+			
+			// aapt resource value: 0x7f060054
+			public const int Date_2 = 2131099732;
+			
+			// aapt resource value: 0x7f060055
+			public const int Date_3 = 2131099733;
+			
+			// aapt resource value: 0x7f060056
+			public const int Date_4 = 2131099734;
+			
+			// aapt resource value: 0x7f060057
+			public const int Date_5 = 2131099735;
+			
+			// aapt resource value: 0x7f060058
+			public const int Date_6 = 2131099736;
+			
+			// aapt resource value: 0x7f060059
+			public const int Date_7 = 2131099737;
+			
+			// aapt resource value: 0x7f06005a
+			public const int Date_8 = 2131099738;
+			
+			// aapt resource value: 0x7f06005b
+			public const int Date_9 = 2131099739;
+			
+			// aapt resource value: 0x7f06005c
+			public const int Day_0 = 2131099740;
+			
+			// aapt resource value: 0x7f06005d
+			public const int Day_1 = 2131099741;
+			
+			// aapt resource value: 0x7f06005e
+			public const int Day_2 = 2131099742;
+			
+			// aapt resource value: 0x7f06005f
+			public const int Day_3 = 2131099743;
+			
+			// aapt resource value: 0x7f060060
+			public const int Day_4 = 2131099744;
+			
+			// aapt resource value: 0x7f060061
+			public const int Day_5 = 2131099745;
+			
+			// aapt resource value: 0x7f060062
+			public const int Day_6 = 2131099746;
+			
+			// aapt resource value: 0x7f060063
+			public const int Day_7 = 2131099747;
+			
+			// aapt resource value: 0x7f060064
+			public const int Day_8 = 2131099748;
+			
+			// aapt resource value: 0x7f060065
+			public const int Day_9 = 2131099749;
+			
 			// aapt resource value: 0x7f06002b
 			public const int GetDataButton = 2131099691;
 			
@@ -154,7 +214,28 @@ namespace Pogrebok
 			public const int WarmTurnText = 2131099678;
 			
 			// aapt resource value: 0x7f060038
-			public const int button12 = 2131099704;
+			public const int buttWeather = 2131099704;
+			
+			// aapt resource value: 0x7f060042
+			public const int cityHumidity = 2131099714;
+			
+			// aapt resource value: 0x7f060048
+			public const int cityPressure = 2131099720;
+			
+			// aapt resource value: 0x7f06004b
+			public const int citySunRise = 2131099723;
+			
+			// aapt resource value: 0x7f06004e
+			public const int citySunset = 2131099726;
+			
+			// aapt resource value: 0x7f06003c
+			public const int cityTemp = 2131099708;
+			
+			// aapt resource value: 0x7f060045
+			public const int cityVisible = 2131099717;
+			
+			// aapt resource value: 0x7f06003f
+			public const int cityWind = 2131099711;
 			
 			// aapt resource value: 0x7f060036
 			public const int countTurnOn = 2131099702;
@@ -168,11 +249,20 @@ namespace Pogrebok
 			// aapt resource value: 0x7f060024
 			public const int kwtFullText = 2131099684;
 			
+			// aapt resource value: 0x7f060039
+			public const int linearLayout1 = 2131099705;
+			
+			// aapt resource value: 0x7f060050
+			public const int linearLayout2 = 2131099728;
+			
 			// aapt resource value: 0x7f060001
 			public const int scrollView1 = 2131099649;
 			
 			// aapt resource value: 0x7f060003
 			public const int tableLayout1 = 2131099651;
+			
+			// aapt resource value: 0x7f060051
+			public const int tableLayout2 = 2131099729;
 			
 			// aapt resource value: 0x7f060004
 			public const int tableRow1 = 2131099652;
@@ -213,6 +303,75 @@ namespace Pogrebok
 			// aapt resource value: 0x7f06001c
 			public const int tableRow9 = 2131099676;
 			
+			// aapt resource value: 0x7f060066
+			public const int tempHigh_0 = 2131099750;
+			
+			// aapt resource value: 0x7f060067
+			public const int tempHigh_1 = 2131099751;
+			
+			// aapt resource value: 0x7f060068
+			public const int tempHigh_2 = 2131099752;
+			
+			// aapt resource value: 0x7f060069
+			public const int tempHigh_3 = 2131099753;
+			
+			// aapt resource value: 0x7f06006a
+			public const int tempHigh_4 = 2131099754;
+			
+			// aapt resource value: 0x7f06006b
+			public const int tempHigh_5 = 2131099755;
+			
+			// aapt resource value: 0x7f06006c
+			public const int tempHigh_6 = 2131099756;
+			
+			// aapt resource value: 0x7f06006d
+			public const int tempHigh_7 = 2131099757;
+			
+			// aapt resource value: 0x7f06006e
+			public const int tempHigh_8 = 2131099758;
+			
+			// aapt resource value: 0x7f06006f
+			public const int tempHigh_9 = 2131099759;
+			
+			// aapt resource value: 0x7f060070
+			public const int tempLow_0 = 2131099760;
+			
+			// aapt resource value: 0x7f060071
+			public const int tempLow_1 = 2131099761;
+			
+			// aapt resource value: 0x7f060072
+			public const int tempLow_2 = 2131099762;
+			
+			// aapt resource value: 0x7f060073
+			public const int tempLow_3 = 2131099763;
+			
+			// aapt resource value: 0x7f060074
+			public const int tempLow_4 = 2131099764;
+			
+			// aapt resource value: 0x7f060075
+			public const int tempLow_5 = 2131099765;
+			
+			// aapt resource value: 0x7f060076
+			public const int tempLow_6 = 2131099766;
+			
+			// aapt resource value: 0x7f060077
+			public const int tempLow_7 = 2131099767;
+			
+			// aapt resource value: 0x7f060078
+			public const int tempLow_8 = 2131099768;
+			
+			// aapt resource value: 0x7f060079
+			public const int tempLow_9 = 2131099769;
+			
+			// aapt resource value: 0x7f060047
+			public const int textVie29 = 2131099719;
+			
+			// aapt resource value: 0x7f060049
+			public const int textVie35 = 2131099721;
+			
+			// aapt resource value: 0x7f06003a
+			public const int textView1 = 2131099706;
+			
 			// aapt resource value: 0x7f06001d
 			public const int textView10 = 2131099677;
 			
@@ -231,8 +390,44 @@ namespace Pogrebok
 			// aapt resource value: 0x7f060005
 			public const int textView2 = 2131099653;
 			
+			// aapt resource value: 0x7f06003b
+			public const int textView24 = 2131099707;
+			
+			// aapt resource value: 0x7f06003e
+			public const int textView25 = 2131099710;
+			
+			// aapt resource value: 0x7f060041
+			public const int textView26 = 2131099713;
+			
+			// aapt resource value: 0x7f060044
+			public const int textView27 = 2131099716;
+			
+			// aapt resource value: 0x7f06004a
+			public const int textView28 = 2131099722;
+			
+			// aapt resource value: 0x7f06004d
+			public const int textView29 = 2131099725;
+			
 			// aapt resource value: 0x7f060008
 			public const int textView3 = 2131099656;
+			
+			// aapt resource value: 0x7f06003d
+			public const int textView30 = 2131099709;
+			
+			// aapt resource value: 0x7f060040
+			public const int textView31 = 2131099712;
+			
+			// aapt resource value: 0x7f060043
+			public const int textView32 = 2131099715;
+			
+			// aapt resource value: 0x7f060046
+			public const int textView33 = 2131099718;
+			
+			// aapt resource value: 0x7f06004c
+			public const int textView34 = 2131099724;
+			
+			// aapt resource value: 0x7f06004f
+			public const int textView35 = 2131099727;
 			
 			// aapt resource value: 0x7f06000b
 			public const int textView4 = 2131099659;
@@ -273,6 +468,9 @@ namespace Pogrebok
 			
 			// aapt resource value: 0x7f030001
 			public const int MainTiles = 2130903041;
+			
+			// aapt resource value: 0x7f030002
+			public const int WeatherScreen = 2130903042;
 			
 			static Layout()
 			{

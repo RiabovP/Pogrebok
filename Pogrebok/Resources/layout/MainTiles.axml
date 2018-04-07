@@ -129,7 +129,7 @@
                         android:layout_width="105dp"
                         android:text="Кол-во вкл" />
                     <Button
-                        android:text="Обновить\n\n1"
+                        android:text="\nОбновить \n"
                         android:layout_column="1"
                         android:id="@+id/Refresh"
                         android:background="@drawable/TileSeparator"
@@ -138,9 +138,9 @@
                         android:layout_marginRight="5dp"
                         android:layout_marginBottom="15dp" />
                     <Button
-                        android:text="Button\n\n2"
+                        android:text="Прогноз"
                         android:layout_column="2"
-                        android:id="@+id/button12"
+                        android:id="@+id/buttWeather"
                         android:background="@drawable/TileSeparator"
                         android:layout_height="105dp"
                         android:layout_width="105dp"
