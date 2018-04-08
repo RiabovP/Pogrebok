@@ -27,6 +27,7 @@ namespace Pogrebok
             FindViewById<TextView>(Resource.Id.cityWind).Text = weather.Wind;
             FindViewById<TextView>(Resource.Id.cityHumidity).Text = weather.Humidity;
             FindViewById<TextView>(Resource.Id.cityVisible).Text = weather.Visibility;
+            FindViewById<TextView>(Resource.Id.cityPressure).Text = weather.Pressure;
             FindViewById<TextView>(Resource.Id.citySunRise).Text = weather.Sunrise;
             FindViewById<TextView>(Resource.Id.citySunset).Text = weather.Sunset;
 
