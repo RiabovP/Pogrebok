@@ -36,7 +36,8 @@
                         android:layout_marginRight="5dp"
                         android:layout_marginBottom="15dp"
                         android:text="Квартира, t"
-                        android:layout_width="105dp" />
+                        android:layout_width="105dp"
+                        android:textColor="#2b2c33" />
                     <Button
                         android:text="Улица, t"
                         android:layout_column="1"
@@ -132,7 +133,7 @@
                         android:text="\nОбновить \n"
                         android:layout_column="1"
                         android:id="@+id/Refresh"
-                        android:background="@drawable/TileSeparator"
+                        android:background="@drawable/TileSeparator_grad"
                         android:layout_height="105dp"
                         android:layout_width="105dp"
                         android:layout_marginRight="5dp"
