@@ -1,6 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" package="Pogrebok.Pogrebok" android:versionName="1.0" android:installLocation="auto" android:versionCode="2">
-	<uses-sdk android:minSdkVersion="15" />
+	<uses-sdk android:minSdkVersion="21" />
 	<application android:label="Pogrebok" android:icon="@drawable/icon_pog"></application>
 	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 </manifest>

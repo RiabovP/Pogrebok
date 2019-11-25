@@ -48,14 +48,14 @@ namespace Pogrebok
             FindViewById<TextView>(Resource.Id.countTurnOn).Text = FindViewById<TextView>(Resource.Id.countTurnOn).Text + "\n\n" + pogreb.count_tarn;
             FindViewById<TextView>(Resource.Id.PriceEE).Text = FindViewById<TextView>(Resource.Id.PriceEE).Text + "\n\n" + pogreb.price_kWt;
             FindViewById<TextView>(Resource.Id.Pressure).Text = FindViewById<TextView>(Resource.Id.Pressure).Text + "\n\n" + pogreb.pressure;
-            Weather weather1 = CoreWeather.GetWeather("Новосибирск", true).Result;
-            FindViewById<TextView>(Resource.Id.buttWeather).Text = FindViewById<TextView>(Resource.Id.buttWeather).Text + "\n\n" + weather1.Temperature;
+           // Weather weather1 = CoreWeather.GetWeather("Новосибирск", true).Result;
+            //FindViewById<TextView>(Resource.Id.buttWeather).Text = FindViewById<TextView>(Resource.Id.buttWeather).Text + "\n\n" + weather1.Temperature;
 
             Button button = FindViewById<Button>(Resource.Id.Refresh);
             button.Click += delegate
              {
                  pogreb = Core.GetPogrebokData().Result;
-                 weather1 = CoreWeather.GetWeather("Новосибирск", true).Result;
+                 //weather1 = CoreWeather.GetWeather("Новосибирск", true).Result;
                  FindViewById<TextView>(Resource.Id.TempMax).Text = TempMax + "\n\n" + pogreb.street_temp_max;
                  FindViewById<TextView>(Resource.Id.TempMin).Text = TempMin + "\n\n" + pogreb.street_temp_min;
                  FindViewById<TextView>(Resource.Id.TempPogrebok).Text = TempPogrebok + "\n\n" + pogreb.cellar_temp;
@@ -66,7 +66,7 @@ namespace Pogrebok
                  FindViewById<TextView>(Resource.Id.countTurnOn).Text = CountTurnOn + "\n\n" + pogreb.count_tarn;
                  FindViewById<TextView>(Resource.Id.PriceEE).Text = PriceEE + "\n\n" + pogreb.price_kWt;
                  FindViewById<TextView>(Resource.Id.Pressure).Text = Pressure + "\n\n" + pogreb.pressure;
-                 FindViewById<TextView>(Resource.Id.buttWeather).Text = PrognozTemp + "\n\n" + weather1.Temperature;
+                 //FindViewById<TextView>(Resource.Id.buttWeather).Text = PrognozTemp + "\n\n" + weather1.Temperature;
              };
 
             button = FindViewById<Button>(Resource.Id.buttWeather);
