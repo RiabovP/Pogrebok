@@ -33,8 +33,8 @@
                         android:id="@+id/TempHome"
                         android:background="@drawable/TileSeparator"
                         android:layout_height="105dp"
-                        android:layout_marginRight="5dp"
-                        android:layout_marginBottom="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="25dp"
                         android:text="Квартира, t"
                         android:layout_width="105dp"
                         android:textColor="#2b2c33" />
@@ -43,17 +43,19 @@
                         android:layout_column="1"
                         android:id="@+id/TempStreet"
                         android:background="@drawable/TileSeparator"
-                        android:layout_marginRight="5dp"
+                        android:layout_marginRight="15dp"
                         android:layout_height="105dp"
-                        android:layout_width="105dp" />
+                        android:layout_width="105dp" 
+						android:layout_marginBottom="25dp"/>
                     <Button
                         android:text="Погребок"
                         android:layout_column="2"
                         android:id="@+id/TempPogrebok"
                         android:background="@drawable/TileSeparator"
-                        android:layout_marginRight="5dp"
+                        android:layout_marginRight="15dp"
                         android:layout_height="105dp"
-                        android:layout_width="105dp" />
+                        android:layout_width="105dp"
+						android:layout_marginBottom="25dp"/>
                 </TableRow>
                 <TableRow
                     android:id="@+id/tableRow2">
@@ -62,8 +64,8 @@
                         android:id="@+id/TempMax"
                         android:background="@drawable/TileSeparator"
                         android:layout_height="105dp"
-                        android:layout_marginRight="5dp"
-                        android:layout_marginBottom="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="25dp"
                         android:layout_width="105dp"
                         android:text="Max, t" />
                     <Button
@@ -73,8 +75,8 @@
                         android:background="@drawable/TileSeparator"
                         android:layout_height="105dp"
                         android:layout_width="105dp"
-                        android:layout_marginRight="5dp"
-                        android:layout_marginBottom="15dp" />
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="25dp" />
                     <Button
                         android:text="Давление"
                         android:layout_column="2"
@@ -82,8 +84,8 @@
                         android:background="@drawable/TileSeparator"
                         android:layout_height="105dp"
                         android:layout_width="105dp"
-                        android:layout_marginRight="5dp"
-                        android:layout_marginBottom="15dp" />
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="25dp" />
                 </TableRow>
                 <TableRow
                     android:id="@+id/tableRow3">
@@ -92,9 +94,9 @@
                         android:id="@+id/RashodEE"
                         android:background="@drawable/TileSeparator"
                         android:layout_height="105dp"
-                        android:layout_marginRight="5dp"
+                        android:layout_marginRight="15dp"
                         android:layout_width="105dp"
-                        android:layout_marginBottom="15dp"
+                        android:layout_marginBottom="25dp"
                         android:text="Расход э/э" />
                     <Button
                         android:text="Время отопл"
@@ -103,10 +105,10 @@
                         android:background="@drawable/TileSeparator"
                         android:layout_height="105dp"
                         android:layout_width="105dp"
-                        android:layout_marginRight="5dp"
+                        android:layout_marginRight="15dp"
                         android:elegantTextHeight="true"
                         android:includeFontPadding="false"
-                        android:layout_marginBottom="15dp"
+                        android:layout_marginBottom="25dp"
                         android:gravity="center" />
                     <Button
                         android:text="Цена э/э"
@@ -115,38 +117,39 @@
                         android:background="@drawable/TileSeparator"
                         android:layout_height="105dp"
                         android:layout_width="105dp"
-                        android:layout_marginRight="5dp"
-                        android:layout_marginBottom="15dp" />
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="25dp" />
                 </TableRow>
                 <TableRow
                     android:id="@+id/tableRow4">
+					<Button
+						android:layout_column="0"
+						android:id="@+id/countTurnOn"
+						android:background="@drawable/TileSeparator"
+						android:layout_height="105dp"
+						android:layout_marginRight="15dp"
+						android:layout_marginBottom="25dp"
+						android:layout_width="105dp"
+						android:text="Кол-во вкл"
+						android:textAlignment="center" />
                     <Button
-                        android:layout_column="0"
-                        android:id="@+id/countTurnOn"
-                        android:background="@drawable/TileSeparator"
-                        android:layout_height="105dp"
-                        android:layout_marginRight="5dp"
-                        android:layout_marginBottom="15dp"
-                        android:layout_width="105dp"
-                        android:text="Кол-во вкл" />
-                    <Button
-                        android:text="\nОбновить \n"
+                        android:text="\nОбновить\n"
                         android:layout_column="1"
                         android:id="@+id/Refresh"
                         android:background="@drawable/TileSeparator_grad"
                         android:layout_height="105dp"
                         android:layout_width="105dp"
-                        android:layout_marginRight="5dp"
-                        android:layout_marginBottom="15dp" />
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="25dp" />
                     <Button
-                        android:text="Прогноз"
+                        android:text="\nПрогноз\n"
                         android:layout_column="2"
                         android:id="@+id/buttWeather"
                         android:background="@drawable/TileSeparator"
                         android:layout_height="105dp"
                         android:layout_width="105dp"
-                        android:layout_marginRight="5dp"
-                        android:layout_marginBottom="15dp" />
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="25dp" />
                 </TableRow>
             </TableLayout>
         </HorizontalScrollView>

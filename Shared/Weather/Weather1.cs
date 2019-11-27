@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Shared
 {
-    public class Weather
+    public class Weather1
     {
         public string Title { get; set; }
         public string Temperature { get; set; }
