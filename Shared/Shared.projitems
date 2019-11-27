@@ -13,7 +13,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Pogreb\DataService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Pogreb\PogrebokV1.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Weather\CoreWeather.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Weather\Weather.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Weather\Core_Weather_api.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Weather\Weather1.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Weather\WeatherDay.cs" />
   </ItemGroup>
 </Project>

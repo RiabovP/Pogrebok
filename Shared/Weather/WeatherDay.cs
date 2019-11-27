@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Shared
 {
-    public class WeatherDay:Weather
+    public class WeatherDay:Weather1
     {
         public string[] date { get; set; }
         public string[] day { get; set; }
