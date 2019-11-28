@@ -23,7 +23,8 @@ namespace Shared
             pogrebData.street_temp_current = (string)pogrebokOverview["temp_street"];
             pogrebData.home_temp = (string)pogrebokOverview["temp_home"];
             pogrebData.kwt_full = (string)pogrebokOverview["kwt_full"];
-            pogrebData.time_power = (string)pogrebokOverview["time_power"];
+            //pogrebData.time_power = (string)pogrebokOverview["time_power"];
+            pogrebData.time_power= Math.Round(((float)pogrebokOverview["time_power"] /60 ), 2).ToString();
             pogrebData.count_tarn = (string)pogrebokOverview["count_tarn"];
             pogrebData.price_kWt = Math.Round(((float)pogrebokOverview["kwt_full"]*2.42),2).ToString();
             pogrebData.pressure = (string)pogrebokOverview["pressure"]; 

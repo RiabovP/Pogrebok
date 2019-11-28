@@ -46,12 +46,13 @@
                     android:layout_marginRight="15dp"
                     android:layout_marginTop="7dp" />
                 <TextView
-                    android:text="C"
+                    android:text="&#176;C"
                     android:layout_column="2"
                     android:id="@+id/textView30"
                     android:textSize="17sp"
                     android:layout_marginRight="15dp"
-                    android:layout_marginTop="7dp" />
+                    android:layout_marginTop="7dp"
+					android:textAlignment="center"/>
             </TableRow>
             <TableRow
                 android:id="@+id/tableRow2">
@@ -74,7 +75,8 @@
                     android:layout_column="2"
                     android:id="@+id/textView31"
                     android:textSize="17sp"
-                    android:layout_marginRight="15dp" />
+                    android:layout_marginRight="15dp" 
+					android:textAlignment="center"/>
             </TableRow>
             <TableRow
                 android:id="@+id/tableRow3">
@@ -92,12 +94,13 @@
                     android:id="@+id/cityHumidity"
                     android:textSize="17sp"
                     android:layout_marginRight="15dp" />
-                <TextView
-                    android:text="C"
-                    android:layout_column="2"
-                    android:id="@+id/textView32"
-                    android:textSize="17sp"
-                    android:layout_marginRight="15dp" />
+				<TextView
+					android:text="%"
+					android:layout_column="2"
+					android:id="@+id/textView32"
+					android:textSize="17sp"
+					android:layout_marginRight="15dp"
+					android:textAlignment="center"/>
             </TableRow>
             <TableRow
                 android:id="@+id/tableRow4">
@@ -115,12 +118,13 @@
                     android:id="@+id/cityVisible"
                     android:textSize="17sp"
                     android:layout_marginRight="15dp" />
-                <TextView
-                    android:text="%"
-                    android:layout_column="2"
-                    android:id="@+id/textView33"
-                    android:textSize="17sp"
-                    android:layout_marginRight="15dp" />
+				<TextView
+					android:layout_column="2"
+					android:id="@+id/textView33"
+					android:textSize="17sp"
+					android:layout_marginRight="15dp"
+					android:text="км" 
+				    android:textAlignment="center"/>
             </TableRow>
             <TableRow
                 android:id="@+id/tableRow5">
@@ -138,12 +142,13 @@
                     android:id="@+id/cityPressure"
                     android:textSize="17sp"
                     android:layout_marginRight="15dp" />
-                <TextView
-                    android:text=""
-                    android:layout_column="2"
-                    android:id="@+id/textVie35"
-                    android:textSize="17sp"
-                    android:layout_marginRight="15dp" />
+				<TextView
+					android:text="мм.рт.ст"
+					android:layout_column="2"
+					android:id="@+id/textVie35"
+					android:textSize="17sp"
+					android:layout_marginRight="15dp" 
+					android:textAlignment="center"/>
             </TableRow>
             <TableRow
                 android:id="@+id/tableRow6">
@@ -205,231 +210,231 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/scrollView1">
-                <TableLayout
-                    android:minWidth="25px"
-                    android:minHeight="25px"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:id="@+id/tableLayout2"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="20dp">
-                    <TableRow
-                        android:id="@+id/tableRow7">
-                        <TextView
-                            android:text="Text"
-                            android:layout_column="0"
-                            android:id="@+id/Date_0"
-                            android:layout_marginLeft="10dp" />
-                        <TextView
-                            android:text="Text"
-                            android:layout_column="1"
-                            android:id="@+id/Date_1"
-                            android:layout_marginLeft="20dp" />
-                        <TextView
-                            android:text="Text"
-                            android:layout_column="2"
-                            android:id="@+id/Date_2"
-                            android:layout_marginLeft="20dp" />
-                        <TextView
-                            android:text="Text"
-                            android:layout_column="3"
-                            android:id="@+id/Date_3"
-                            android:layout_marginLeft="20dp" />
-                        <TextView
-                            android:text="Text"
-                            android:layout_column="4"
-                            android:id="@+id/Date_4"
-                            android:layout_marginLeft="20dp" />
-                        <TextView
-                            android:text="Text"
-                            android:layout_column="5"
-                            android:id="@+id/Date_5"
-                            android:layout_marginLeft="20dp" />
-                        <TextView
-                            android:text="Text"
-                            android:layout_column="6"
-                            android:id="@+id/Date_6"
-                            android:layout_marginLeft="20dp" />
-                        <TextView
-                            android:text="Text"
-                            android:layout_column="7"
-                            android:id="@+id/Date_7"
-                            android:layout_marginLeft="20dp" />
-                        <TextView
-                            android:text="Text"
-                            android:layout_column="8"
-                            android:id="@+id/Date_8"
-                            android:layout_marginLeft="20dp" />
-                        <TextView
-                            android:text="Text"
-                            android:layout_column="9"
-                            android:id="@+id/Date_9"
-                            android:layout_marginLeft="20dp" />
-                    </TableRow>
-                    <TableRow
-                        android:id="@+id/tableRow8"
-                        android:layout_marginBottom="10dp">
-                        <TextView
-                            android:text="Text"
-                            android:layout_column="0"
-                            android:id="@+id/Day_0"
-                            android:layout_marginLeft="40dp" />
-                        <TextView
-                            android:text="Text"
-                            android:layout_column="1"
-                            android:id="@+id/Day_1"
-                            android:layout_marginLeft="40dp" />
-                        <TextView
-                            android:text="Text"
-                            android:layout_column="2"
-                            android:id="@+id/Day_2"
-                            android:layout_marginLeft="40dp" />
-                        <TextView
-                            android:text="Text"
-                            android:layout_column="3"
-                            android:id="@+id/Day_3"
-                            android:layout_marginLeft="40dp" />
-                        <TextView
-                            android:text="Text"
-                            android:layout_column="4"
-                            android:id="@+id/Day_4"
-                            android:layout_marginLeft="40dp" />
-                        <TextView
-                            android:text="Text"
-                            android:layout_column="5"
-                            android:id="@+id/Day_5"
-                            android:layout_marginLeft="40dp" />
-                        <TextView
-                            android:text="Text"
-                            android:layout_column="6"
-                            android:id="@+id/Day_6"
-                            android:layout_marginLeft="40dp" />
-                        <TextView
-                            android:text="Text"
-                            android:layout_column="7"
-                            android:id="@+id/Day_7"
-                            android:layout_marginLeft="40dp" />
-                        <TextView
-                            android:text="Text"
-                            android:layout_column="8"
-                            android:id="@+id/Day_8"
-                            android:layout_marginLeft="40dp" />
-                        <TextView
-                            android:text="Text"
-                            android:layout_column="9"
-                            android:id="@+id/Day_9"
-                            android:layout_marginLeft="40dp" />
-                    </TableRow>
-                    <TableRow
-                        android:id="@+id/tableRow9"
-                        android:layout_marginBottom="10dp">
-                        <TextView
-                            android:text="Text"
-                            android:layout_column="0"
-                            android:id="@+id/tempHigh_0"
-                            android:layout_marginLeft="40dp" />
-                        <TextView
-                            android:text="Text"
-                            android:layout_column="1"
-                            android:id="@+id/tempHigh_1"
-                            android:layout_marginLeft="40dp" />
-                        <TextView
-                            android:text="Text"
-                            android:layout_column="2"
-                            android:id="@+id/tempHigh_2"
-                            android:layout_marginLeft="40dp" />
-                        <TextView
-                            android:text="Text"
-                            android:layout_column="3"
-                            android:id="@+id/tempHigh_3"
-                            android:layout_marginLeft="40dp" />
-                        <TextView
-                            android:text="Text"
-                            android:layout_column="4"
-                            android:id="@+id/tempHigh_4"
-                            android:layout_marginLeft="40dp" />
-                        <TextView
-                            android:text="Text"
-                            android:layout_column="5"
-                            android:id="@+id/tempHigh_5"
-                            android:layout_marginLeft="40dp" />
-                        <TextView
-                            android:text="Text"
-                            android:layout_column="6"
-                            android:id="@+id/tempHigh_6"
-                            android:layout_marginLeft="40dp" />
-                        <TextView
-                            android:text="Text"
-                            android:layout_column="7"
-                            android:id="@+id/tempHigh_7"
-                            android:layout_marginLeft="40dp" />
-                        <TextView
-                            android:text="Text"
-                            android:layout_column="8"
-                            android:id="@+id/tempHigh_8"
-                            android:layout_marginLeft="40dp" />
-                        <TextView
-                            android:text="Text"
-                            android:layout_column="9"
-                            android:id="@+id/tempHigh_9"
-                            android:layout_marginLeft="40dp" />
-                    </TableRow>
-                    <TableRow
-                        android:id="@+id/tableRow10"
-                        android:layout_marginBottom="10dp">
-                        <TextView
-                            android:text="Text"
-                            android:layout_column="0"
-                            android:id="@+id/tempLow_0"
-                            android:layout_marginLeft="40dp" />
-                        <TextView
-                            android:text="Text"
-                            android:layout_column="1"
-                            android:id="@+id/tempLow_1"
-                            android:layout_marginLeft="40dp" />
-                        <TextView
-                            android:text="Text"
-                            android:layout_column="2"
-                            android:id="@+id/tempLow_2"
-                            android:layout_marginLeft="40dp" />
-                        <TextView
-                            android:text="Text"
-                            android:layout_column="3"
-                            android:id="@+id/tempLow_3"
-                            android:layout_marginLeft="40dp" />
-                        <TextView
-                            android:text="Text"
-                            android:layout_column="4"
-                            android:id="@+id/tempLow_4"
-                            android:layout_marginLeft="40dp" />
-                        <TextView
-                            android:text="Text"
-                            android:layout_column="5"
-                            android:id="@+id/tempLow_5"
-                            android:layout_marginLeft="40dp" />
-                        <TextView
-                            android:text="Text"
-                            android:layout_column="6"
-                            android:id="@+id/tempLow_6"
-                            android:layout_marginLeft="40dp" />
-                        <TextView
-                            android:text="Text"
-                            android:layout_column="7"
-                            android:id="@+id/tempLow_7"
-                            android:layout_marginLeft="40dp" />
-                        <TextView
-                            android:text="Text"
-                            android:layout_column="8"
-                            android:id="@+id/tempLow_8"
-                            android:layout_marginLeft="40dp" />
-                        <TextView
-                            android:text="Text"
-                            android:layout_column="9"
-                            android:id="@+id/tempLow_9"
-                            android:layout_marginLeft="40dp" />
-                    </TableRow>
-                </TableLayout>
+				<TableLayout
+					android:minWidth="25px"
+					android:minHeight="25px"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:id="@+id/tableLayout2"
+					android:layout_marginTop="20dp"
+					android:layout_marginLeft="5dp"
+					android:layout_marginRight="5dp">
+					<TableRow
+						android:id="@+id/tableRow7">
+						<TextView
+							android:text="Text"
+							android:layout_column="0"
+							android:id="@+id/Date_0"
+							android:layout_marginLeft="10dp" />
+						<TextView
+							android:text="Text"
+							android:layout_column="1"
+							android:id="@+id/Date_1"
+							android:layout_marginLeft="20dp" />
+						<TextView
+							android:text="Text"
+							android:layout_column="2"
+							android:id="@+id/Date_2"
+							android:layout_marginLeft="20dp" />
+						<TextView
+							android:text="Text"
+							android:layout_column="3"
+							android:id="@+id/Date_3"
+							android:layout_marginLeft="20dp" />
+						<TextView
+							android:text="Text"
+							android:layout_column="4"
+							android:id="@+id/Date_4"
+							android:layout_marginLeft="20dp" />
+						<TextView
+							android:text="Text"
+							android:layout_column="5"
+							android:id="@+id/Date_5"
+							android:layout_marginLeft="20dp" />
+						<TextView
+							android:text="Text"
+							android:layout_column="6"
+							android:id="@+id/Date_6"
+							android:layout_marginLeft="20dp" />
+						<TextView
+							android:text="Text"
+							android:layout_column="7"
+							android:id="@+id/Date_7"
+							android:layout_marginLeft="20dp" />
+						<TextView
+							android:text="Text"
+							android:layout_column="8"
+							android:id="@+id/Date_8"
+							android:layout_marginLeft="20dp" />
+						<TextView
+							android:text="Text"
+							android:layout_column="9"
+							android:id="@+id/Date_9"
+							android:layout_marginLeft="20dp" />
+					</TableRow>
+					<TableRow
+						android:id="@+id/tableRow8"
+						android:layout_marginBottom="10dp">
+						<TextView
+							android:text="Text"
+							android:layout_column="0"
+							android:id="@+id/Day_0"
+							android:layout_marginLeft="40dp" />
+						<TextView
+							android:text="Text"
+							android:layout_column="1"
+							android:id="@+id/Day_1"
+							android:layout_marginLeft="40dp" />
+						<TextView
+							android:text="Text"
+							android:layout_column="2"
+							android:id="@+id/Day_2"
+							android:layout_marginLeft="40dp" />
+						<TextView
+							android:text="Text"
+							android:layout_column="3"
+							android:id="@+id/Day_3"
+							android:layout_marginLeft="40dp" />
+						<TextView
+							android:text="Text"
+							android:layout_column="4"
+							android:id="@+id/Day_4"
+							android:layout_marginLeft="40dp" />
+						<TextView
+							android:text="Text"
+							android:layout_column="5"
+							android:id="@+id/Day_5"
+							android:layout_marginLeft="40dp" />
+						<TextView
+							android:text="Text"
+							android:layout_column="6"
+							android:id="@+id/Day_6"
+							android:layout_marginLeft="40dp" />
+						<TextView
+							android:text="Text"
+							android:layout_column="7"
+							android:id="@+id/Day_7"
+							android:layout_marginLeft="40dp" />
+						<TextView
+							android:text="Text"
+							android:layout_column="8"
+							android:id="@+id/Day_8"
+							android:layout_marginLeft="40dp" />
+						<TextView
+							android:text="Text"
+							android:layout_column="9"
+							android:id="@+id/Day_9"
+							android:layout_marginLeft="40dp" />
+					</TableRow>
+					<TableRow
+						android:id="@+id/tableRow9"
+						android:layout_marginBottom="10dp">
+						<TextView
+							android:text="&#176;C"
+							android:layout_column="0"
+							android:id="@+id/tempHigh_0"
+							android:layout_marginLeft="40dp" />
+						<TextView
+							android:text="&#176;C"
+							android:layout_column="1"
+							android:id="@+id/tempHigh_1"
+							android:layout_marginLeft="40dp" />
+						<TextView
+							android:text="&#176;C"
+							android:layout_column="2"
+							android:id="@+id/tempHigh_2"
+							android:layout_marginLeft="40dp" />
+						<TextView
+							android:text="&#176;C"
+							android:layout_column="3"
+							android:id="@+id/tempHigh_3"
+							android:layout_marginLeft="40dp" />
+						<TextView
+							android:text="&#176;C"
+							android:layout_column="4"
+							android:id="@+id/tempHigh_4"
+							android:layout_marginLeft="40dp" />
+						<TextView
+							android:text="&#176;C"
+							android:layout_column="5"
+							android:id="@+id/tempHigh_5"
+							android:layout_marginLeft="40dp" />
+						<TextView
+							android:text="&#176;C"
+							android:layout_column="6"
+							android:id="@+id/tempHigh_6"
+							android:layout_marginLeft="40dp" />
+						<TextView
+							android:text="&#176;C"
+							android:layout_column="7"
+							android:id="@+id/tempHigh_7"
+							android:layout_marginLeft="40dp" />
+						<TextView
+							android:text="&#176;C"
+							android:layout_column="8"
+							android:id="@+id/tempHigh_8"
+							android:layout_marginLeft="40dp" />
+						<TextView
+							android:text="&#176;C"
+							android:layout_column="9"
+							android:id="@+id/tempHigh_9"
+							android:layout_marginLeft="40dp" />
+					</TableRow>
+					<TableRow
+						android:id="@+id/tableRow10"
+						android:layout_marginBottom="10dp">
+						<TextView
+							android:text="&#176;C"
+							android:layout_column="0"
+							android:id="@+id/tempLow_0"
+							android:layout_marginLeft="40dp" />
+						<TextView
+							android:text="&#176;C"
+							android:layout_column="1"
+							android:id="@+id/tempLow_1"
+							android:layout_marginLeft="40dp" />
+						<TextView
+							android:text="&#176;C"
+							android:layout_column="2"
+							android:id="@+id/tempLow_2"
+							android:layout_marginLeft="40dp" />
+						<TextView
+							android:text="&#176;C"
+							android:layout_column="3"
+							android:id="@+id/tempLow_3"
+							android:layout_marginLeft="40dp" />
+						<TextView
+							android:text="&#176;C"
+							android:layout_column="4"
+							android:id="@+id/tempLow_4"
+							android:layout_marginLeft="40dp" />
+						<TextView
+							android:text="&#176;C"
+							android:layout_column="5"
+							android:id="@+id/tempLow_5"
+							android:layout_marginLeft="40dp" />
+						<TextView
+							android:text="&#176;C"
+							android:layout_column="6"
+							android:id="@+id/tempLow_6"
+							android:layout_marginLeft="40dp" />
+						<TextView
+							android:text="&#176;C"
+							android:layout_column="7"
+							android:id="@+id/tempLow_7"
+							android:layout_marginLeft="40dp" />
+						<TextView
+							android:text="&#176;C"
+							android:layout_column="8"
+							android:id="@+id/tempLow_8"
+							android:layout_marginLeft="40dp" />
+						<TextView
+							android:text="&#176;C"
+							android:layout_column="9"
+							android:id="@+id/tempLow_9"
+							android:layout_marginLeft="40dp" />
+					</TableRow>
+				</TableLayout>
             </HorizontalScrollView>
         </LinearLayout>
     </LinearLayout>

@@ -4,10 +4,11 @@ using System.Text;
 using System.Net;
 using System.Security.Cryptography;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
-namespace Shared.Weather
+namespace Shared
 {
-    class Core_Weather_api
+    public class Core_Weather_api
     {
         const string cURL = "https://weather-ydn-yql.media.yahoo.com/forecastrss";
         const string cAppID = "Bms2Me7c";
@@ -79,34 +80,17 @@ namespace Shared.Weather
 
         }  // end _get_auth
 
-        //public static void Main(string[] args)
-        //{
-
-        //    const string lURL = cURL + "?" + cWeatherID + "&" + cUnitID + "&format=" + cFormat;
-
-        //    var lClt = new WebClient();
-
-        //    lClt.Headers.Set("Content-Type", "application/" + cFormat);
-        //    lClt.Headers.Add("X-Yahoo-App-Id", cAppID);
-        //    lClt.Headers.Add("Authorization", _get_auth());
-
-        //    Console.WriteLine("Downloading Yahoo weather report . . .");
-
-        //    byte[] lDataBuffer = lClt.DownloadData(lURL);
-
-        //    string lOut = Encoding.ASCII.GetString(lDataBuffer);
-
-        //    Console.WriteLine(lOut);
-
-        //    Console.Write("Press any key to continue . . . ");
-        //    Console.ReadKey(true);
-
-        //}  // end Main
+        public static DateTime UnixTimeStampToDateTime(double unixTimeStamp)  //Перевод секунд в дату
+        {
+            // Unix timestamp is seconds past epoch
+            System.DateTime dtDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, System.DateTimeKind.Utc);
+            dtDateTime = dtDateTime.AddSeconds(unixTimeStamp).ToLocalTime();
+            return dtDateTime;
+        }
 
         public static async Task<WeatherDay> GetWeather(string nameCity, bool start)
         {
-            //string queryString = "https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22" + nameCity + "%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys";
-
+           
             const string lURL = cURL + "?" + cWeatherID + "&" + cUnitID + "&format=" + cFormat;
 
             var lClt = new WebClient();
@@ -119,18 +103,15 @@ namespace Shared.Weather
 
             string lOut = Encoding.ASCII.GetString(lDataBuffer);
 
-
-            dynamic result = await DataService.getDataFromPogrebok(lURL).ConfigureAwait(false);
+            dynamic data = JsonConvert.DeserializeObject(lOut);
 
             if (start == true)
             {
-                dynamic weatherOverview = result["current_observation"];
+                dynamic weatherOverview = data["current_observation"];
 
                 if (true)
                 {
                     WeatherDay weather = new WeatherDay();
-
-                    weather.Title = (string)weatherOverview["current_observation"];
 
                     dynamic wind = weatherOverview["wind"];
                     weather.Wind = (string)wind["speed"];
@@ -138,37 +119,37 @@ namespace Shared.Weather
                     dynamic atmosphere = weatherOverview["atmosphere"];
                     weather.Humidity = (string)atmosphere["humidity"];
                     weather.Visibility = (string)atmosphere["visibility"];
-                    weather.Pressure = (string)atmosphere["pressure"];
+                    weather.Pressure = Math.Round((float)((atmosphere["pressure"] * 0.750064)), 1).ToString();
+                    //weather.Pressure = (string)(atmosphere["pressure"]* 0.750064);  // Перевод миллибары в мм.рт.ст
 
                     dynamic astronomy = weatherOverview["astronomy"];
                     weather.Sunrise = (string)astronomy["sunrise"];
                     weather.Sunset = (string)astronomy["sunset"];
 
-                    dynamic image = weatherOverview["image"];
-                    weather.imgSource = (string)image["url"];
+                    //dynamic image = weatherOverview["image"];
+                    //weather.imgSource = (string)image["url"];
 
-                    dynamic weatherType = weatherOverview["item"]["condition"];
-                    weather.Temperature = Math.Round((float)((weatherType["temp"] - 32) / 1.8), 1).ToString();
+                    dynamic weatherType = weatherOverview["condition"];
+                    weather.Temperature = weatherType["temperature"];
                     weather.typeWeather = (string)weatherType["text"];
+                    // weather.Temperature = Math.Round((float)((weatherType["temperature"] - 32) / 1.8), 1).ToString(); //перевод Фарадея в Цельсии
 
-                    dynamic weatherOverviewDays = weatherOverview["item"]["forecast"];
-                    //for (int i=0; weatherOverviewDays[i] <10; i++)
-                    //{
-                    //   // dynamic weatherOverviewDays = weatherOverview["item"]["forecast"][i];
-                    //    weather.date[i] = (string)weatherOverviewDays["date"];
-                    //    weather.day[i] = (string)weatherOverviewDays["day"];
-                    //    weather.temp_high[i] = (string)weatherOverviewDays["high"];
-                    //    weather.temp_low[i] = (string)weatherOverviewDays["low"];
-                    //}
+
+                    dynamic weatherOverviewDays = data["forecasts"];
 
                     // ---- считывание данных на 10 дней вперед
                     int i = 0;
+                    DateTime dt;
                     foreach (dynamic weat in weatherOverviewDays)
                     {
-                        weather.date[i] = (string)weat["date"];
+
+                        dt=UnixTimeStampToDateTime((int)weat["date"]);
+                        weather.date[i] = (string)dt.Date.ToShortDateString();
                         weather.day[i] = (string)weat["day"];
-                        weather.temp_high[i] = Math.Round((float)((weat["high"] - 32) / 1.8), 1).ToString();
-                        weather.temp_low[i++] = Math.Round((float)((weat["low"] - 32) / 1.8), 1).ToString();
+                        weather.temp_high[i] = weat["high"];
+                        weather.temp_low[i++] = weat["low"];
+                        //weather.temp_high[i] = Math.Round((float)((weat["high"] - 32) / 1.8), 1).ToString();
+                        //weather.temp_low[i++] = Math.Round((float)((weat["low"] - 32) / 1.8), 1).ToString();
                     }
                     return weather;
                 }

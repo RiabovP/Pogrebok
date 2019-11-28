@@ -38,7 +38,7 @@ namespace Pogrebok
 
             // Default name for button
 
-            TempMax= FindViewById<TextView>(Resource.Id.TempMax).Text;
+            TempMax= FindViewById<TextView>(Resource.Id.TempMax).Text;  //УДАЛИТЬ можно ументшить размера кода через .text см экран погоды
             TempMin = FindViewById<TextView>(Resource.Id.TempMin).Text;
             TempPogrebok = FindViewById<TextView>(Resource.Id.TempPogrebok).Text;
             TempStreet = FindViewById<TextView>(Resource.Id.TempStreet).Text;
@@ -59,17 +59,17 @@ namespace Pogrebok
             FindViewById<TextView>(Resource.Id.RashodEE).Text = FindViewById<TextView>(Resource.Id.RashodEE).Text + "\n\n" + pogreb.kwt_full;
             FindViewById<TextView>(Resource.Id.TimeWarm).Text = FindViewById<TextView>(Resource.Id.TimeWarm).Text + "\n" + pogreb.time_power;
             FindViewById<TextView>(Resource.Id.countTurnOn).Text = FindViewById<TextView>(Resource.Id.countTurnOn).Text + "\n\n" + pogreb.count_tarn;
-            FindViewById<TextView>(Resource.Id.PriceEE).Text = FindViewById<TextView>(Resource.Id.PriceEE).Text + "\n\n" + pogreb.price_kWt;
+            FindViewById<TextView>(Resource.Id.PriceEE).Text = FindViewById<TextView>(Resource.Id.PriceEE).Text + "\n" + pogreb.price_kWt;
             FindViewById<TextView>(Resource.Id.Pressure).Text = FindViewById<TextView>(Resource.Id.Pressure).Text + "\n\n" + pogreb.pressure;
            
-            // Weather weather1 = CoreWeather.GetWeather("Новосибирск", true).Result;
-            //FindViewById<TextView>(Resource.Id.buttWeather).Text = FindViewById<TextView>(Resource.Id.buttWeather).Text + "\n\n" + weather1.Temperature;
+            Weather1 weather1 = Core_Weather_api.GetWeather("Новосибирск", true).Result;
+            FindViewById<TextView>(Resource.Id.buttWeather).Text = FindViewById<TextView>(Resource.Id.buttWeather).Text + "\n\n" + weather1.Temperature;
 
             Button button = FindViewById<Button>(Resource.Id.Refresh);
             button.Click += delegate
              {
                  pogreb = Core.GetPogrebokData().Result;
-                 //weather1 = CoreWeather.GetWeather("Новосибирск", true).Result;
+                 weather1 = Core_Weather_api.GetWeather("Новосибирск", true).Result;
                  FindViewById<TextView>(Resource.Id.TempMax).Text = TempMax + "\n\n" + pogreb.street_temp_max;
                  FindViewById<TextView>(Resource.Id.TempMin).Text = TempMin + "\n\n" + pogreb.street_temp_min;
                  FindViewById<TextView>(Resource.Id.TempPogrebok).Text = TempPogrebok + "\n\n" + pogreb.cellar_temp;
@@ -78,28 +78,29 @@ namespace Pogrebok
                  FindViewById<TextView>(Resource.Id.RashodEE).Text = RashodEE + "\n\n" + pogreb.kwt_full;
                  FindViewById<TextView>(Resource.Id.TimeWarm).Text = TimeWarm + "\n" + pogreb.time_power;
                  FindViewById<TextView>(Resource.Id.countTurnOn).Text = CountTurnOn + "\n\n" + pogreb.count_tarn;
-                 FindViewById<TextView>(Resource.Id.PriceEE).Text = PriceEE + "\n\n" + pogreb.price_kWt;
+                 FindViewById<TextView>(Resource.Id.PriceEE).Text = PriceEE + "\n" + pogreb.price_kWt;
                  FindViewById<TextView>(Resource.Id.Pressure).Text = Pressure + "\n\n" + pogreb.pressure;
                  Save_state();
-                 //FindViewById<TextView>(Resource.Id.buttWeather).Text = PrognozTemp + "\n\n" + weather1.Temperature;
+                 FindViewById<TextView>(Resource.Id.buttWeather).Text = PrognozTemp + "\n\n" + weather1.Temperature;
 
 
              };
 
-            //button = FindViewById<Button>(Resource.Id.buttWeather);
-            //button.Click += delegate
-            //  {
-            //      Intent intent = new Intent(this, typeof(WeatherActivity));
-            //      StartActivity(intent);
-            //  };
-
             button = FindViewById<Button>(Resource.Id.buttWeather);
             button.Click += delegate
-            {
-                Intent intent = new Intent(this, typeof(ShowPref));
-                StartActivity(intent);
-                OverridePendingTransition(Resource.Animation.trans, Resource.Animation.alpha);
-            };
+              {
+                  Intent intent = new Intent(this, typeof(WeatherActivity));
+                  StartActivity(intent);
+                  OverridePendingTransition(Resource.Animation.trans, Resource.Animation.alpha);
+              };
+
+            //button = FindViewById<Button>(Resource.Id.buttWeather);
+            //button.Click += delegate
+            //{
+            //    Intent intent = new Intent(this, typeof(ShowPref));
+            //    StartActivity(intent);
+            //    OverridePendingTransition(Resource.Animation.trans, Resource.Animation.alpha);
+            //};
         }
         void Save_state()
         {

@@ -21,7 +21,7 @@ namespace Pogrebok
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.WeatherScreen);
 
-            WeatherDay weather = CoreWeather.GetWeather("Новосибирск", true).Result;
+            WeatherDay weather = Core_Weather_api.GetWeather("Новосибирск", true).Result;
 
             FindViewById<TextView>(Resource.Id.cityTemp).Text = weather.Temperature;
             FindViewById<TextView>(Resource.Id.cityWind).Text = weather.Wind;
@@ -40,8 +40,8 @@ namespace Pogrebok
             {
                 FindViewById<TextView>(date_id++).Text = weather.date[i];
                 FindViewById<TextView>(day_id++).Text = weather.day[i];
-                FindViewById<TextView>(tempH_id++).Text = weather.temp_high[i];
-                FindViewById<TextView>(tempL_id++).Text = weather.temp_low[i];
+                FindViewById<TextView>(tempH_id++).Text = weather.temp_high[i] + " " + FindViewById<TextView>(tempH_id).Text.ToString();
+                FindViewById<TextView>(tempL_id++).Text = weather.temp_low[i]; /*+ " " + FindViewById<TextView>(tempL_id).Text.ToString();*/
             }
         }
     }

@@ -23,7 +23,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/tableLayout1"
-                android:layout_marginLeft="15dp"
+                android:layout_marginLeft="25dp"
                 android:layout_marginTop="40dp">
                 <TableRow
                     android:id="@+id/tableRow1"
@@ -33,7 +33,7 @@
                         android:id="@+id/TempHome"
                         android:background="@drawable/TileSeparator"
                         android:layout_height="105dp"
-                        android:layout_marginRight="15dp"
+                        android:layout_marginRight="20dp"
                         android:layout_marginBottom="25dp"
                         android:text="Квартира, t"
                         android:layout_width="105dp"
@@ -43,7 +43,7 @@
                         android:layout_column="1"
                         android:id="@+id/TempStreet"
                         android:background="@drawable/TileSeparator"
-                        android:layout_marginRight="15dp"
+                        android:layout_marginRight="20dp"
                         android:layout_height="105dp"
                         android:layout_width="105dp" 
 						android:layout_marginBottom="25dp"/>
@@ -52,7 +52,7 @@
                         android:layout_column="2"
                         android:id="@+id/TempPogrebok"
                         android:background="@drawable/TileSeparator"
-                        android:layout_marginRight="15dp"
+                        android:layout_marginRight="20dp"
                         android:layout_height="105dp"
                         android:layout_width="105dp"
 						android:layout_marginBottom="25dp"/>
@@ -64,7 +64,7 @@
                         android:id="@+id/TempMax"
                         android:background="@drawable/TileSeparator"
                         android:layout_height="105dp"
-                        android:layout_marginRight="15dp"
+                        android:layout_marginRight="20dp"
                         android:layout_marginBottom="25dp"
                         android:layout_width="105dp"
                         android:text="Max, t" />
@@ -75,7 +75,7 @@
                         android:background="@drawable/TileSeparator"
                         android:layout_height="105dp"
                         android:layout_width="105dp"
-                        android:layout_marginRight="15dp"
+                        android:layout_marginRight="20dp"
                         android:layout_marginBottom="25dp" />
                     <Button
                         android:text="Давление"
@@ -84,7 +84,7 @@
                         android:background="@drawable/TileSeparator"
                         android:layout_height="105dp"
                         android:layout_width="105dp"
-                        android:layout_marginRight="15dp"
+                        android:layout_marginRight="20dp"
                         android:layout_marginBottom="25dp" />
                 </TableRow>
                 <TableRow
@@ -94,30 +94,30 @@
                         android:id="@+id/RashodEE"
                         android:background="@drawable/TileSeparator"
                         android:layout_height="105dp"
-                        android:layout_marginRight="15dp"
+                        android:layout_marginRight="20dp"
                         android:layout_width="105dp"
                         android:layout_marginBottom="25dp"
                         android:text="Расход э/э" />
                     <Button
-                        android:text="Время отопл"
+                        android:text="Кол-во часов"
                         android:layout_column="1"
                         android:id="@+id/TimeWarm"
                         android:background="@drawable/TileSeparator"
                         android:layout_height="105dp"
                         android:layout_width="105dp"
-                        android:layout_marginRight="15dp"
+                        android:layout_marginRight="20dp"
                         android:elegantTextHeight="true"
                         android:includeFontPadding="false"
                         android:layout_marginBottom="25dp"
                         android:gravity="center" />
                     <Button
-                        android:text="Цена э/э"
+                        android:text="Стоимость э/э"
                         android:layout_column="2"
                         android:id="@+id/PriceEE"
                         android:background="@drawable/TileSeparator"
                         android:layout_height="105dp"
                         android:layout_width="105dp"
-                        android:layout_marginRight="15dp"
+                        android:layout_marginRight="20dp"
                         android:layout_marginBottom="25dp" />
                 </TableRow>
                 <TableRow
@@ -127,7 +127,7 @@
 						android:id="@+id/countTurnOn"
 						android:background="@drawable/TileSeparator"
 						android:layout_height="105dp"
-						android:layout_marginRight="15dp"
+						android:layout_marginRight="20dp"
 						android:layout_marginBottom="25dp"
 						android:layout_width="105dp"
 						android:text="Кол-во вкл"
@@ -139,16 +139,16 @@
                         android:background="@drawable/TileSeparator_grad"
                         android:layout_height="105dp"
                         android:layout_width="105dp"
-                        android:layout_marginRight="15dp"
+                        android:layout_marginRight="20dp"
                         android:layout_marginBottom="25dp" />
                     <Button
-                        android:text="\nПрогноз\n"
+                        android:text="Прогноз"
                         android:layout_column="2"
                         android:id="@+id/buttWeather"
                         android:background="@drawable/TileSeparator"
                         android:layout_height="105dp"
                         android:layout_width="105dp"
-                        android:layout_marginRight="15dp"
+                        android:layout_marginRight="20dp"
                         android:layout_marginBottom="25dp" />
                 </TableRow>
             </TableLayout>
