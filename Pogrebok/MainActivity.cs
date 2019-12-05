@@ -26,6 +26,8 @@ namespace Pogrebok
         string PriceEE;
         string Pressure;
         string PrognozTemp;
+        string Date_hange;
+        string Heating;
 
         protected string Save_text = "Temp_min";
 
@@ -49,6 +51,8 @@ namespace Pogrebok
             PriceEE = FindViewById<TextView>(Resource.Id.PriceEE).Text;
             Pressure = FindViewById<TextView>(Resource.Id.Pressure).Text;
             PrognozTemp = FindViewById<TextView>(Resource.Id.buttWeather).Text;
+            Date_hange = FindViewById<TextView>(Resource.Id.dateUpdate).Text;
+
 
             // Для нового mainTiles
             FindViewById<TextView>(Resource.Id.TempMax).Text = FindViewById<TextView>(Resource.Id.TempMax).Text + "\n\n" + pogreb.street_temp_max;
@@ -61,7 +65,11 @@ namespace Pogrebok
             FindViewById<TextView>(Resource.Id.countTurnOn).Text = FindViewById<TextView>(Resource.Id.countTurnOn).Text + "\n\n" + pogreb.count_tarn;
             FindViewById<TextView>(Resource.Id.PriceEE).Text = FindViewById<TextView>(Resource.Id.PriceEE).Text + "\n" + pogreb.price_kWt;
             FindViewById<TextView>(Resource.Id.Pressure).Text = FindViewById<TextView>(Resource.Id.Pressure).Text + "\n\n" + pogreb.pressure;
-           
+            FindViewById<TextView>(Resource.Id.dateUpdate).Text = pogreb.date_hange;
+            if(pogreb.heating == "1")
+                FindViewById<Button>(Resource.Id.butsOnOff).SetBackgroundResource(Resource.Drawable.Power_On);
+
+
             Weather1 weather1 = Core_Weather_api.GetWeather("Новосибирск", true).Result;
             FindViewById<TextView>(Resource.Id.buttWeather).Text = FindViewById<TextView>(Resource.Id.buttWeather).Text + "\n\n" + weather1.Temperature;
 
@@ -82,8 +90,9 @@ namespace Pogrebok
                  FindViewById<TextView>(Resource.Id.Pressure).Text = Pressure + "\n\n" + pogreb.pressure;
                  Save_state();
                  FindViewById<TextView>(Resource.Id.buttWeather).Text = PrognozTemp + "\n\n" + weather1.Temperature;
-
-
+                 FindViewById<TextView>(Resource.Id.dateUpdate).Text = pogreb.date_hange;
+                 if (pogreb.heating == "1")
+                     FindViewById<Button>(Resource.Id.butsOnOff).SetBackgroundResource(Resource.Drawable.Power_On);
              };
 
             button = FindViewById<Button>(Resource.Id.buttWeather);

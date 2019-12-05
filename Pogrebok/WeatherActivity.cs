@@ -40,8 +40,16 @@ namespace Pogrebok
             {
                 FindViewById<TextView>(date_id++).Text = weather.date[i];
                 FindViewById<TextView>(day_id++).Text = weather.day[i];
-                FindViewById<TextView>(tempH_id++).Text = weather.temp_high[i] + " " + FindViewById<TextView>(tempH_id).Text.ToString();
-                FindViewById<TextView>(tempL_id++).Text = weather.temp_low[i]; /*+ " " + FindViewById<TextView>(tempL_id).Text.ToString();*/
+                if (i != 9)
+                {
+                    FindViewById<TextView>(tempH_id++).Text = weather.temp_high[i] + " " + FindViewById<TextView>(tempH_id).Text.ToString();
+                    FindViewById<TextView>(tempL_id++).Text = weather.temp_low[i] + " " + FindViewById<TextView>(tempL_id).Text.ToString();
+                }
+                else if (i==9) //”словие дл€ правильный работы крайнего дн€ (low крашилс€ / high отображалс€ с начальной температурой Low
+                {
+                    FindViewById<TextView>(tempH_id).Text = weather.temp_high[i] + " " + FindViewById<TextView>(tempH_id).Text.ToString();
+                    FindViewById<TextView>(tempL_id).Text = weather.temp_low[i] + " " + FindViewById<TextView>(tempL_id).Text.ToString();
+                }
             }
         }
     }

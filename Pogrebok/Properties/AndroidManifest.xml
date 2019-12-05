@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="Pogrebok.Pogrebok" android:versionName="1.0" android:installLocation="auto" android:versionCode="2">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="Pogrebok.Pogrebok" android:installLocation="auto" android:versionCode="2" android:versionName="2.0(2)">
 	<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="28" />
 	<application android:label="Pogrebok" android:icon="@drawable/icon_pog"></application>
 	<uses-permission android:name="android.permission.INTERNET" />

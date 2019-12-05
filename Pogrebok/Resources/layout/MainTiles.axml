@@ -1,157 +1,196 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:minWidth="25px"
-    android:minHeight="25px">
-    <ScrollView
-        android:minWidth="25px"
-        android:minHeight="25px"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/scrollView1">
-        <HorizontalScrollView
-            android:minWidth="25px"
-            android:minHeight="25px"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/horizontalScrollView1">
-            <TableLayout
-                android:minWidth="25px"
-                android:minHeight="25px"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/tableLayout1"
-                android:layout_marginLeft="25dp"
-                android:layout_marginTop="40dp">
-                <TableRow
-                    android:id="@+id/tableRow1"
-                    android:gravity="center_horizontal">
-                    <Button
-                        android:layout_column="0"
-                        android:id="@+id/TempHome"
-                        android:background="@drawable/TileSeparator"
-                        android:layout_height="105dp"
-                        android:layout_marginRight="20dp"
-                        android:layout_marginBottom="25dp"
-                        android:text="Квартира, t"
-                        android:layout_width="105dp"
-                        android:textColor="#2b2c33" />
-                    <Button
-                        android:text="Улица, t"
-                        android:layout_column="1"
-                        android:id="@+id/TempStreet"
-                        android:background="@drawable/TileSeparator"
-                        android:layout_marginRight="20dp"
-                        android:layout_height="105dp"
-                        android:layout_width="105dp" 
-						android:layout_marginBottom="25dp"/>
-                    <Button
-                        android:text="Погребок"
-                        android:layout_column="2"
-                        android:id="@+id/TempPogrebok"
-                        android:background="@drawable/TileSeparator"
-                        android:layout_marginRight="20dp"
-                        android:layout_height="105dp"
-                        android:layout_width="105dp"
-						android:layout_marginBottom="25dp"/>
-                </TableRow>
-                <TableRow
-                    android:id="@+id/tableRow2">
-                    <Button
-                        android:layout_column="0"
-                        android:id="@+id/TempMax"
-                        android:background="@drawable/TileSeparator"
-                        android:layout_height="105dp"
-                        android:layout_marginRight="20dp"
-                        android:layout_marginBottom="25dp"
-                        android:layout_width="105dp"
-                        android:text="Max, t" />
-                    <Button
-                        android:text="Min, t"
-                        android:layout_column="1"
-                        android:id="@+id/TempMin"
-                        android:background="@drawable/TileSeparator"
-                        android:layout_height="105dp"
-                        android:layout_width="105dp"
-                        android:layout_marginRight="20dp"
-                        android:layout_marginBottom="25dp" />
-                    <Button
-                        android:text="Давление"
-                        android:layout_column="2"
-                        android:id="@+id/Pressure"
-                        android:background="@drawable/TileSeparator"
-                        android:layout_height="105dp"
-                        android:layout_width="105dp"
-                        android:layout_marginRight="20dp"
-                        android:layout_marginBottom="25dp" />
-                </TableRow>
-                <TableRow
-                    android:id="@+id/tableRow3">
-                    <Button
-                        android:layout_column="0"
-                        android:id="@+id/RashodEE"
-                        android:background="@drawable/TileSeparator"
-                        android:layout_height="105dp"
-                        android:layout_marginRight="20dp"
-                        android:layout_width="105dp"
-                        android:layout_marginBottom="25dp"
-                        android:text="Расход э/э" />
-                    <Button
-                        android:text="Кол-во часов"
-                        android:layout_column="1"
-                        android:id="@+id/TimeWarm"
-                        android:background="@drawable/TileSeparator"
-                        android:layout_height="105dp"
-                        android:layout_width="105dp"
-                        android:layout_marginRight="20dp"
-                        android:elegantTextHeight="true"
-                        android:includeFontPadding="false"
-                        android:layout_marginBottom="25dp"
-                        android:gravity="center" />
-                    <Button
-                        android:text="Стоимость э/э"
-                        android:layout_column="2"
-                        android:id="@+id/PriceEE"
-                        android:background="@drawable/TileSeparator"
-                        android:layout_height="105dp"
-                        android:layout_width="105dp"
-                        android:layout_marginRight="20dp"
-                        android:layout_marginBottom="25dp" />
-                </TableRow>
-                <TableRow
-                    android:id="@+id/tableRow4">
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:minWidth="25px"
+	android:minHeight="25px"
+	android:background="@drawable/pogrebok_blur">
+	<ScrollView
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:id="@+id/scrollView1">
+		<HorizontalScrollView
+			android:minWidth="25px"
+			android:minHeight="25px"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:id="@+id/horizontalScrollView1">
+			<TableLayout
+				android:minWidth="25px"
+				android:minHeight="25px"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:id="@+id/tableLayout1"
+				android:layout_marginLeft="25dp"
+				android:layout_marginTop="40dp">
+				<TableRow
+					android:id="@+id/tableRow1"
+					android:gravity="center_horizontal">
+					<Button
+						android:layout_column="0"
+						android:id="@+id/TempHome"
+						android:background="@drawable/TileSeparator"
+						android:layout_height="105dp"
+						android:layout_marginRight="15dp"
+						android:layout_marginBottom="25dp"
+						android:text="Квартира, t"
+						android:layout_width="105dp"
+						android:textColor="#ffffff"
+						android:layout_weight="1"/>
+					<Button
+						android:text="Улица, t"
+						android:layout_column="1"
+						android:id="@+id/TempStreet"
+						android:background="@drawable/TileSeparator"
+						android:layout_marginRight="15dp"
+						android:layout_height="105dp"
+						android:layout_width="105dp"
+						android:layout_marginBottom="25dp"
+						android:textColor="#ffffff"
+						android:layout_weight="1"/>
+					<Button
+						android:text="Погребок"
+						android:layout_column="2"
+						android:id="@+id/TempPogrebok"
+						android:background="@drawable/TileSeparator"
+						android:layout_marginRight="15dp"
+						android:layout_height="105dp"
+						android:layout_width="105dp"
+						android:layout_marginBottom="25dp"
+						android:textColor="#ffffff"
+						android:layout_weight="1"/>
+				</TableRow>
+				<TableRow
+					android:id="@+id/tableRow2">
+					<Button
+						android:layout_column="0"
+						android:id="@+id/TempMax"
+						android:background="@drawable/TileSeparator"
+						android:layout_height="105dp"
+						android:layout_marginRight="15dp"
+						android:layout_marginBottom="25dp"
+						android:layout_width="105dp"
+						android:text="Max, t"
+						android:textColor="#ffffff"/>
+					<Button
+						android:text="Min, t"
+						android:layout_column="1"
+						android:id="@+id/TempMin"
+						android:background="@drawable/TileSeparator"
+						android:layout_height="105dp"
+						android:layout_width="105dp"
+						android:layout_marginRight="15dp"
+						android:layout_marginBottom="25dp"
+						android:textColor="#ffffff"/>
+					<Button
+						android:text="Давление"
+						android:layout_column="2"
+						android:id="@+id/Pressure"
+						android:background="@drawable/TileSeparator"
+						android:layout_height="105dp"
+						android:layout_width="105dp"
+						android:layout_marginRight="15dp"
+						android:layout_marginBottom="25dp"
+						android:textColor="#ffffff"/>
+				</TableRow>
+				<TableRow
+					android:id="@+id/tableRow3">
+					<Button
+						android:layout_column="0"
+						android:id="@+id/RashodEE"
+						android:background="@drawable/TileSeparator"
+						android:layout_height="105dp"
+						android:layout_marginRight="15dp"
+						android:layout_width="105dp"
+						android:layout_marginBottom="25dp"
+						android:text="Расход э/э"
+						android:textColor="#ffffff"/>
+					<Button
+						android:text="Кол-во часов"
+						android:layout_column="1"
+						android:id="@+id/TimeWarm"
+						android:background="@drawable/TileSeparator"
+						android:layout_height="105dp"
+						android:layout_width="105dp"
+						android:layout_marginRight="15dp"
+						android:elegantTextHeight="true"
+						android:includeFontPadding="false"
+						android:layout_marginBottom="25dp"
+						android:gravity="center"
+						android:textColor="#ffffff"/>
+					<Button
+						android:text="Стоимость э/э"
+						android:layout_column="2"
+						android:id="@+id/PriceEE"
+						android:background="@drawable/TileSeparator"
+						android:layout_height="105dp"
+						android:layout_width="105dp"
+						android:layout_marginRight="15dp"
+						android:layout_marginBottom="25dp"
+						android:textColor="#ffffff"/>
+				</TableRow>
+				<TableRow
+					android:id="@+id/tableRow4">
 					<Button
 						android:layout_column="0"
 						android:id="@+id/countTurnOn"
 						android:background="@drawable/TileSeparator"
 						android:layout_height="105dp"
-						android:layout_marginRight="20dp"
+						android:layout_marginRight="15dp"
 						android:layout_marginBottom="25dp"
 						android:layout_width="105dp"
 						android:text="Кол-во вкл"
-						android:textAlignment="center" />
-                    <Button
-                        android:text="\nОбновить\n"
-                        android:layout_column="1"
-                        android:id="@+id/Refresh"
-                        android:background="@drawable/TileSeparator_grad"
-                        android:layout_height="105dp"
-                        android:layout_width="105dp"
-                        android:layout_marginRight="20dp"
-                        android:layout_marginBottom="25dp" />
-                    <Button
-                        android:text="Прогноз"
-                        android:layout_column="2"
-                        android:id="@+id/buttWeather"
-                        android:background="@drawable/TileSeparator"
-                        android:layout_height="105dp"
-                        android:layout_width="105dp"
-                        android:layout_marginRight="20dp"
-                        android:layout_marginBottom="25dp" />
-                </TableRow>
-            </TableLayout>
-        </HorizontalScrollView>
-    </ScrollView>
+						android:textAlignment="center"
+						android:textColor="#ffffff"/>
+					<Button
+						android:text="\nОбновить\n"
+						android:layout_column="1"
+						android:id="@+id/Refresh"
+						android:background="@drawable/TileSeparator_grad"
+						android:layout_height="105dp"
+						android:layout_width="105dp"
+						android:layout_marginRight="15dp"
+						android:layout_marginBottom="25dp"
+					    android:textColor="#ffffff"/>
+					<Button
+						android:text="Прогноз"
+						android:layout_column="2"
+						android:id="@+id/buttWeather"
+						android:background="@drawable/TileSeparator"
+						android:layout_height="105dp"
+						android:layout_width="105dp"
+						android:layout_marginRight="15dp"
+						android:layout_marginBottom="25dp"
+						android:textColor="#ffffff"/>
+				</TableRow>
+				<TableRow
+					android:id="@+id/tableRow5">
+					<Button
+						android:id="@+id/butsOnOff"
+						android:layout_column="1"
+						android:background="@drawable/power_off"
+						android:layout_width="105dp"
+						android:layout_height="100dp"
+						android:layout_marginRight="15dp"
+						android:layout_marginBottom="20dp"/>
+				</TableRow>
+				<TableRow
+					android:id="@+id/tableRow6">
+					<TextView
+						android:text=""
+						android:layout_column="1"
+						android:id="@+id/dateUpdate"
+						android:textAlignment="center"
+						android:textColor="#ffffff"
+						android:layout_marginTop="50dp"
+						/>
+				</TableRow>
+				
+			</TableLayout>
+		</HorizontalScrollView>
+	</ScrollView>
 </RelativeLayout>

@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:minWidth="25px"
-    android:minHeight="25px">
+    android:minHeight="25px"
+	android:background="@drawable/splashweather_blur">
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -26,8 +27,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/tableLayout1"
             android:layout_gravity="center_horizontal"
-            android:background="@drawable/TileSeparator">
-            <TableRow
+            android:background="@drawable/TileSeparator">  
+			<TableRow
                 android:id="@+id/tableRow1">
                 <TextView
                     android:text="Температура"
@@ -218,7 +219,7 @@
 					android:id="@+id/tableLayout2"
 					android:layout_marginTop="20dp"
 					android:layout_marginLeft="5dp"
-					android:layout_marginRight="5dp">
+					android:layout_marginRight="55dp">
 					<TableRow
 						android:id="@+id/tableRow7">
 						<TextView
@@ -270,7 +271,8 @@
 							android:text="Text"
 							android:layout_column="9"
 							android:id="@+id/Date_9"
-							android:layout_marginLeft="20dp" />
+							android:layout_marginLeft="20dp" 
+						    android:layout_marginRight="25dp"/>
 					</TableRow>
 					<TableRow
 						android:id="@+id/tableRow8"

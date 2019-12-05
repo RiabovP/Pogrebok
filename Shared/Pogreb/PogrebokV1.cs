@@ -16,5 +16,7 @@ namespace Shared
         public string count_tarn;
         public string price_kWt;
         public string pressure;
+        public string heating;
+        public string date_hange;
     }
 }

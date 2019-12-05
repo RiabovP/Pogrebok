@@ -2,4 +2,6 @@
 <resources>
     <string name="Hello">Hello World, Click Me!</string>
     <string name="ApplicationName">Pogrebok</string>
+    <string name ="AppId">Bms2Me7c</string>
+  
 </resources>

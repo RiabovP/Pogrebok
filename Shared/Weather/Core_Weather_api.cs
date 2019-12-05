@@ -37,7 +37,6 @@ namespace Shared
 
         static string _get_auth()
         {
-            string retVal;
             string lNonce = _get_nonce();
             string lTimes = _get_timestamp();
             string lCKey = string.Concat(cConsumerSecret, "&");
@@ -119,7 +118,7 @@ namespace Shared
                     dynamic atmosphere = weatherOverview["atmosphere"];
                     weather.Humidity = (string)atmosphere["humidity"];
                     weather.Visibility = (string)atmosphere["visibility"];
-                    weather.Pressure = Math.Round((float)((atmosphere["pressure"] * 0.750064)), 1).ToString();
+                    weather.Pressure = Math.Round((float)((atmosphere["pressure"] * 0.750064)), 1).ToString(System.Globalization.CultureInfo.GetCultureInfo("en-US"));
                     //weather.Pressure = (string)(atmosphere["pressure"]* 0.750064);  // Перевод миллибары в мм.рт.ст
 
                     dynamic astronomy = weatherOverview["astronomy"];
