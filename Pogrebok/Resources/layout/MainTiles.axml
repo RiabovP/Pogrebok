@@ -37,12 +37,12 @@
 						android:layout_height="105dp"
 						android:layout_marginRight="15dp"
 						android:layout_marginBottom="25dp"
-						android:text="Квартира, t"
+						android:text="@string/TempStreet"
 						android:layout_width="105dp"
 						android:textColor="#ffffff"
 						android:layout_weight="1"/>
 					<Button
-						android:text="Улица, t"
+						android:text="@string/TempHome"
 						android:layout_column="1"
 						android:id="@+id/TempStreet"
 						android:background="@drawable/TileSeparator"
@@ -53,7 +53,7 @@
 						android:textColor="#ffffff"
 						android:layout_weight="1"/>
 					<Button
-						android:text="Погребок"
+						android:text="@string/TempPogrebok"
 						android:layout_column="2"
 						android:id="@+id/TempPogrebok"
 						android:background="@drawable/TileSeparator"
@@ -87,7 +87,7 @@
 						android:layout_marginBottom="25dp"
 						android:textColor="#ffffff"/>
 					<Button
-						android:text="Давление"
+						android:text="@string/Pressure"
 						android:layout_column="2"
 						android:id="@+id/Pressure"
 						android:background="@drawable/TileSeparator"
@@ -107,10 +107,10 @@
 						android:layout_marginRight="15dp"
 						android:layout_width="105dp"
 						android:layout_marginBottom="25dp"
-						android:text="Расход э/э"
+						android:text="@string/EnergyConsumption"
 						android:textColor="#ffffff"/>
 					<Button
-						android:text="Кол-во часов"
+						android:text="@string/AmountHours"
 						android:layout_column="1"
 						android:id="@+id/TimeWarm"
 						android:background="@drawable/TileSeparator"
@@ -123,7 +123,7 @@
 						android:gravity="center"
 						android:textColor="#ffffff"/>
 					<Button
-						android:text="Стоимость э/э"
+						android:text="@string/PriceEnergy"
 						android:layout_column="2"
 						android:id="@+id/PriceEE"
 						android:background="@drawable/TileSeparator"
@@ -143,11 +143,11 @@
 						android:layout_marginRight="15dp"
 						android:layout_marginBottom="25dp"
 						android:layout_width="105dp"
-						android:text="Кол-во вкл"
+						android:text="@string/Report"
 						android:textAlignment="center"
 						android:textColor="#ffffff"/>
 					<Button
-						android:text="\nОбновить\n"
+						android:text="@string/Refresh"
 						android:layout_column="1"
 						android:id="@+id/Refresh"
 						android:background="@drawable/TileSeparator_grad"
@@ -157,7 +157,7 @@
 						android:layout_marginBottom="25dp"
 					    android:textColor="#ffffff"/>
 					<Button
-						android:text="Прогноз"
+						android:text="@string/Forecast"
 						android:layout_column="2"
 						android:id="@+id/buttWeather"
 						android:background="@drawable/TileSeparator"
