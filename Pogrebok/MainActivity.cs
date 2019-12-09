@@ -8,6 +8,7 @@ using Java;
 using Android;
 using Android.Graphics;
 using Android.Content;
+using Android.Views;
 
 namespace Pogrebok
 {
@@ -103,6 +104,20 @@ namespace Pogrebok
                   OverridePendingTransition(Resource.Animation.trans, Resource.Animation.alpha);
               };
 
+            button = FindViewById<Button>(Resource.Id.TempMax); //Вызов Меню
+            button.Click += (s, arg) =>
+              {
+                  pogreb = Core.GetPogrebokData_temp().Result;
+
+                  PopupMenu menu = new PopupMenu(this, button);
+                  menu.Inflate(Resource.Menu.menuTemp);
+
+                  menu.Menu.FindItem(Resource.Id.menuTempMax).SetTitle("TempMax= " + pogreb.street_temp_max_byDate);
+                  menu.Menu.FindItem(Resource.Id.menuTempMin).SetTitle("TempMin= " + pogreb.street_temp_min_byDate);
+
+                  menu.Show();
+              };
+
             //button = FindViewById<Button>(Resource.Id.buttWeather);
             //button.Click += delegate
             //{
@@ -121,6 +136,8 @@ namespace Pogrebok
             Toast.MakeText(this, "Параметр Минимальная температура сохранена", ToastLength.Short).Show();
 
         }
+
+ 
     }
 }
 
