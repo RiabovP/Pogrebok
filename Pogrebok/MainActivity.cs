@@ -28,7 +28,7 @@ namespace Pogrebok
         string Pressure;
         string PrognozTemp;
         string Date_hange;
-        string Heating;
+        //string Heating;
 
         protected string Save_text = "Temp_min";
 
@@ -104,8 +104,15 @@ namespace Pogrebok
                   OverridePendingTransition(Resource.Animation.trans, Resource.Animation.alpha);
               };
 
+            button = FindViewById<Button>(Resource.Id.countTurnOn);
+            button.Click += delegate
+            {
+                setDate();
+
+            };
+
             button = FindViewById<Button>(Resource.Id.TempMax); //Вызов Меню
-            button.Click += (s, arg) =>
+            button.Click += delegate
               {
                   pogreb = Core.GetPogrebokData_temp().Result;
 
@@ -117,6 +124,8 @@ namespace Pogrebok
 
                   menu.Show();
               };
+
+
 
             //button = FindViewById<Button>(Resource.Id.buttWeather);
             //button.Click += delegate
@@ -137,7 +146,26 @@ namespace Pogrebok
 
         }
 
- 
+        public void setDate()
+        {
+            DateTime date = DateTime.Today;
+            new DatePickerDialog(this, onDataSet, date.Year, date.Month-1, date.Day).Show();
+        }
+
+        private void onDataSet(object sender, DatePickerDialog.DateSetEventArgs e)
+        {
+            pogreb.DatePic = e.Date.ToLongDateString();
+            string date;
+            int month = e.Month + 1;
+            date = e.Year.ToString() + "." + month.ToString() + "." + e.DayOfMonth.ToString();
+
+            Intent intent = new Intent(this, typeof(DatePickerActivity));
+
+            intent.PutExtra("fname", date);
+            StartActivity(intent);
+
+            //throw new NotImplementedException();
+        }
     }
 }
 

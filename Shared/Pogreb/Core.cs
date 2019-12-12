@@ -54,5 +54,21 @@ namespace Shared
             return pogrebData;
         }
 
+        public static async Task<PogrebokV1> GetPogrebokData_temp_calendar(string date)
+        {
+            string queryString = "http://37.193.0.199:1010/Tmax_Tmin.php?Tmax_Tmin"+"&date="+date;
+
+            dynamic result = await DataService.getDataFromPogrebok(queryString).ConfigureAwait(false);
+
+            dynamic pogrebokOverview = result["contents"];
+
+            PogrebokV1 pogrebData = new PogrebokV1();
+
+            pogrebData.street_temp_max_byDateCal = (string)pogrebokOverview["Tmax"];
+            pogrebData.street_temp_min_byDateCal = (string)pogrebokOverview["Tmin"];
+
+            return pogrebData;
+        }
+
     }
 }

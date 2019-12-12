@@ -20,5 +20,8 @@ namespace Shared
         public string date_hange;
         public string street_temp_max_byDate;
         public string street_temp_min_byDate;
+        public string DatePic;
+        public string street_temp_max_byDateCal;
+        public string street_temp_min_byDateCal;
     }
 }

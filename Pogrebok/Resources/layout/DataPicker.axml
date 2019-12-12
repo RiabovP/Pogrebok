@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+	<TextView
+		android:text="Данные с Календаря"
+		android:textSize="30sp"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center_horizontal"
+		android:id="@+id/Datecal"
+		android:layout_marginTop="20dp"/>
+	<TextView
+		android:text="Дата: "
+		android:textSize="30sp"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="50dp"
+		android:gravity="center_horizontal"
+		android:id="@+id/DatePciker"/>
+	<TextView
+		android:id="@+id/MaxTempDateCal"
+		android:text="Максимальная температура = "
+		android:textSize="20sp"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="50dp"
+		android:gravity="center_horizontal"
+		android:background="@drawable/tileseparator"/>
+
+	<TextView
+		android:id="@+id/MinTempDateCal"
+		android:text="Минимальная температура = "
+		android:textSize="20sp"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="20dp"
+		android:gravity="center_horizontal"
+		android:background="@drawable/tileseparator"/>
+
+</LinearLayout>
