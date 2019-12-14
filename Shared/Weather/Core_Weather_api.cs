@@ -87,7 +87,7 @@ namespace Shared
             return dtDateTime;
         }
 
-        public static async Task<WeatherDay> GetWeather(string nameCity, bool start)
+        public static async Task<WeatherDay> GetWeather()
         {
            
             const string lURL = cURL + "?" + cWeatherID + "&" + cUnitID + "&format=" + cFormat;
@@ -104,12 +104,10 @@ namespace Shared
 
             dynamic data = JsonConvert.DeserializeObject(lOut);
 
-            if (start == true)
-            {
-                dynamic weatherOverview = data["current_observation"];
+            dynamic weatherOverview = data["current_observation"];
 
-                if (true)
-                {
+            if (true)
+            {
                     WeatherDay weather = new WeatherDay();
 
                     dynamic wind = weatherOverview["wind"];
@@ -152,12 +150,10 @@ namespace Shared
                     }
                     return weather;
                 }
-                else
-                {
-                    return null;
-                }
+            else
+            {
+                return null;
             }
-            else return null;
         }
     }
 }

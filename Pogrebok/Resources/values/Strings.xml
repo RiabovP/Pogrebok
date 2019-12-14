@@ -3,7 +3,7 @@
   <string name="Hello">Hello World, Click Me!</string>
   <string name="ApplicationName">Pogrebok</string>
   <string name ="AppId">Bms2Me7c</string>
-  <string name ="Report">Отчет</string>
+  <string name ="Report">\nОтчет\n</string>
   <string name ="TempHome">Квартира, t</string>
   <string name ="TempStreet">Улица, t</string>
   <string name ="TempPogrebok">Погребок</string>

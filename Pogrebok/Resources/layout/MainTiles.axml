@@ -37,12 +37,12 @@
 						android:layout_height="105dp"
 						android:layout_marginRight="15dp"
 						android:layout_marginBottom="25dp"
-						android:text="@string/TempStreet"
+						android:text="@string/TempHome"
 						android:layout_width="105dp"
 						android:textColor="#ffffff"
 						android:layout_weight="1"/>
 					<Button
-						android:text="@string/TempHome"
+						android:text="@string/TempStreet"
 						android:layout_column="1"
 						android:id="@+id/TempStreet"
 						android:background="@drawable/TileSeparator"
