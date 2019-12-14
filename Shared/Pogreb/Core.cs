@@ -38,6 +38,7 @@ namespace Shared
             return pogrebData;
         }
 
+        //Запрос на минимульную/максимальную за месяц в алерт попап
         public static async Task<PogrebokV1> GetPogrebokData_temp()
         {
             string queryString = "http://37.193.0.199:1010/Tmax_Tmin.php?Tmax_Tmin";
@@ -54,6 +55,7 @@ namespace Shared
             return pogrebData;
         }
 
+        //Запрос минимальной/максимальной для календаря
         public static async Task<PogrebokV1> GetPogrebokData_temp_calendar(string date)
         {
             string queryString = "http://37.193.0.199:1010/Tmax_Tmin.php?Tmax_Tmin"+"&date="+date;

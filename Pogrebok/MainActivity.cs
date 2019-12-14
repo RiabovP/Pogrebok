@@ -48,7 +48,6 @@ namespace Pogrebok
             TempHome = FindViewById<TextView>(Resource.Id.TempHome).Text;
             RashodEE = FindViewById<TextView>(Resource.Id.RashodEE).Text;
             TimeWarm = FindViewById<TextView>(Resource.Id.TimeWarm).Text;
-            CountTurnOn = FindViewById<TextView>(Resource.Id.countTurnOn).Text;
             PriceEE = FindViewById<TextView>(Resource.Id.PriceEE).Text;
             Pressure = FindViewById<TextView>(Resource.Id.Pressure).Text;
             PrognozTemp = FindViewById<TextView>(Resource.Id.buttWeather).Text;
@@ -63,7 +62,6 @@ namespace Pogrebok
             FindViewById<TextView>(Resource.Id.TempHome).Text = FindViewById<TextView>(Resource.Id.TempHome).Text + "\n\n" + pogreb.home_temp;
             FindViewById<TextView>(Resource.Id.RashodEE).Text = FindViewById<TextView>(Resource.Id.RashodEE).Text + "\n\n" + pogreb.kwt_full;
             FindViewById<TextView>(Resource.Id.TimeWarm).Text = FindViewById<TextView>(Resource.Id.TimeWarm).Text + "\n" + pogreb.time_power;
-            FindViewById<TextView>(Resource.Id.countTurnOn).Text = FindViewById<TextView>(Resource.Id.countTurnOn).Text + "\n\n" + pogreb.count_tarn;
             FindViewById<TextView>(Resource.Id.PriceEE).Text = FindViewById<TextView>(Resource.Id.PriceEE).Text + "\n" + pogreb.price_kWt;
             FindViewById<TextView>(Resource.Id.Pressure).Text = FindViewById<TextView>(Resource.Id.Pressure).Text + "\n\n" + pogreb.pressure;
             FindViewById<TextView>(Resource.Id.dateUpdate).Text = pogreb.date_hange;
@@ -71,14 +69,15 @@ namespace Pogrebok
                 FindViewById<Button>(Resource.Id.butsOnOff).SetBackgroundResource(Resource.Drawable.Power_On);
 
 
-            Weather1 weather1 = Core_Weather_api.GetWeather("Новосибирск", true).Result;
+            Weather1 weather1 = Core_Weather_api.GetWeather().Result;
             FindViewById<TextView>(Resource.Id.buttWeather).Text = FindViewById<TextView>(Resource.Id.buttWeather).Text + "\n\n" + weather1.Temperature;
 
+            //Обновление данных для главной страницы
             Button button = FindViewById<Button>(Resource.Id.Refresh);
             button.Click += delegate
              {
                  pogreb = Core.GetPogrebokData().Result;
-                 weather1 = Core_Weather_api.GetWeather("Новосибирск", true).Result;
+                 weather1 = Core_Weather_api.GetWeather().Result;
                  FindViewById<TextView>(Resource.Id.TempMax).Text = TempMax + "\n\n" + pogreb.street_temp_max;
                  FindViewById<TextView>(Resource.Id.TempMin).Text = TempMin + "\n\n" + pogreb.street_temp_min;
                  FindViewById<TextView>(Resource.Id.TempPogrebok).Text = TempPogrebok + "\n\n" + pogreb.cellar_temp;
@@ -86,7 +85,6 @@ namespace Pogrebok
                  FindViewById<TextView>(Resource.Id.TempHome).Text = TempHome + "\n\n" + pogreb.home_temp;
                  FindViewById<TextView>(Resource.Id.RashodEE).Text = RashodEE + "\n\n" + pogreb.kwt_full;
                  FindViewById<TextView>(Resource.Id.TimeWarm).Text = TimeWarm + "\n" + pogreb.time_power;
-                 FindViewById<TextView>(Resource.Id.countTurnOn).Text = CountTurnOn + "\n\n" + pogreb.count_tarn;
                  FindViewById<TextView>(Resource.Id.PriceEE).Text = PriceEE + "\n" + pogreb.price_kWt;
                  FindViewById<TextView>(Resource.Id.Pressure).Text = Pressure + "\n\n" + pogreb.pressure;
                  Save_state();
@@ -111,7 +109,8 @@ namespace Pogrebok
 
             };
 
-            button = FindViewById<Button>(Resource.Id.TempMax); //Вызов Меню
+            //Вызов Меню
+            button = FindViewById<Button>(Resource.Id.TempMax); 
             button.Click += delegate
               {
                   pogreb = Core.GetPogrebokData_temp().Result;
@@ -135,6 +134,7 @@ namespace Pogrebok
             //    OverridePendingTransition(Resource.Animation.trans, Resource.Animation.alpha);
             //};
         }
+        //Сохранение в preference
         void Save_state()
         {
             sPref = GetSharedPreferences("MyPref", FileCreationMode.Private);
@@ -146,12 +146,14 @@ namespace Pogrebok
 
         }
 
+        //Дата пикер метод появления
         public void setDate()
         {
             DateTime date = DateTime.Today;
             new DatePickerDialog(this, onDataSet, date.Year, date.Month-1, date.Day).Show();
         }
 
+        //Функция сохранения выбор из датапикера
         private void onDataSet(object sender, DatePickerDialog.DateSetEventArgs e)
         {
             pogreb.DatePic = e.Date.ToLongDateString();

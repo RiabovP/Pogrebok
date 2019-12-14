@@ -21,7 +21,7 @@ namespace Pogrebok
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.WeatherScreen);
 
-            WeatherDay weather = Core_Weather_api.GetWeather("Новосибирск", true).Result;
+            WeatherDay weather = Core_Weather_api.GetWeather().Result;
 
             FindViewById<TextView>(Resource.Id.cityTemp).Text = weather.Temperature;
             FindViewById<TextView>(Resource.Id.cityWind).Text = weather.Wind;
