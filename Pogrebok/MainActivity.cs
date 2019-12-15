@@ -109,23 +109,6 @@ namespace Pogrebok
 
             };
 
-            //Вызов Меню
-            button = FindViewById<Button>(Resource.Id.TempMax); 
-            button.Click += delegate
-              {
-                  pogreb = Core.GetPogrebokData_temp().Result;
-
-                  PopupMenu menu = new PopupMenu(this, button);
-                  menu.Inflate(Resource.Menu.menuTemp);
-
-                  menu.Menu.FindItem(Resource.Id.menuTempMax).SetTitle("TempMax= " + pogreb.street_temp_max_byDate);
-                  menu.Menu.FindItem(Resource.Id.menuTempMin).SetTitle("TempMin= " + pogreb.street_temp_min_byDate);
-
-                  menu.Show();
-              };
-
-
-
             //button = FindViewById<Button>(Resource.Id.buttWeather);
             //button.Click += delegate
             //{
