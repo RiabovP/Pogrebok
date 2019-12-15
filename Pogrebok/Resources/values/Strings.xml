@@ -13,6 +13,7 @@
   <string name ="PriceEnergy">Стоимость э/э</string>
   <string name ="Refresh">\nОбновить\n</string>
   <string name ="Forecast">Прогноз</string>
+  <string name ="gradus">d</string>
   
   
 </resources>

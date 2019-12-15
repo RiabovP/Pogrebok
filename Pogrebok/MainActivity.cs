@@ -23,12 +23,14 @@ namespace Pogrebok
         string TempHome;
         string RashodEE;
         string TimeWarm;
-        string CountTurnOn;
+        //string CountTurnOn;
         string PriceEE;
         string Pressure;
         string PrognozTemp;
         string Date_hange;
         string Heating;
+
+
 
         protected string Save_text = "Temp_min";
 
@@ -41,7 +43,7 @@ namespace Pogrebok
 
             // Default name for button
 
-            TempMax= FindViewById<TextView>(Resource.Id.TempMax).Text;  //УДАЛИТЬ можно ументшить размера кода через .text см экран погоды
+            TempMax = FindViewById<TextView>(Resource.Id.TempMax).Text;  //УДАЛИТЬ можно уменьшит размера кода через .text см экран погоды
             TempMin = FindViewById<TextView>(Resource.Id.TempMin).Text;
             TempPogrebok = FindViewById<TextView>(Resource.Id.TempPogrebok).Text;
             TempStreet = FindViewById<TextView>(Resource.Id.TempStreet).Text;
@@ -55,17 +57,17 @@ namespace Pogrebok
 
 
             // Для нового mainTiles
-            FindViewById<TextView>(Resource.Id.TempMax).Text = FindViewById<TextView>(Resource.Id.TempMax).Text + "\n\n" + pogreb.street_temp_max;
-            FindViewById<TextView>(Resource.Id.TempMin).Text = FindViewById<TextView>(Resource.Id.TempMin).Text +"\n\n" + pogreb.street_temp_min;
-            FindViewById<TextView>(Resource.Id.TempPogrebok).Text = FindViewById<TextView>(Resource.Id.TempPogrebok).Text + "\n\n" + pogreb.cellar_temp;
-            FindViewById<TextView>(Resource.Id.TempStreet).Text = FindViewById<TextView>(Resource.Id.TempStreet).Text + "\n\n" + pogreb.street_temp_current;
-            FindViewById<TextView>(Resource.Id.TempHome).Text = FindViewById<TextView>(Resource.Id.TempHome).Text + "\n\n" + pogreb.home_temp;
+            FindViewById<TextView>(Resource.Id.TempMax).Text = FindViewById<TextView>(Resource.Id.TempMax).Text + "\n\n" + pogreb.street_temp_max + " °C";
+            FindViewById<TextView>(Resource.Id.TempMin).Text = FindViewById<TextView>(Resource.Id.TempMin).Text + "\n\n" + pogreb.street_temp_min + " °C";
+            FindViewById<TextView>(Resource.Id.TempPogrebok).Text = FindViewById<TextView>(Resource.Id.TempPogrebok).Text + "\n\n" + pogreb.cellar_temp + " °C";
+            FindViewById<TextView>(Resource.Id.TempStreet).Text = FindViewById<TextView>(Resource.Id.TempStreet).Text + "\n\n" + pogreb.street_temp_current + " °C";
+            FindViewById<TextView>(Resource.Id.TempHome).Text = FindViewById<TextView>(Resource.Id.TempHome).Text + "\n\n" + pogreb.home_temp + " °C";
             FindViewById<TextView>(Resource.Id.RashodEE).Text = FindViewById<TextView>(Resource.Id.RashodEE).Text + "\n\n" + pogreb.kwt_full;
             FindViewById<TextView>(Resource.Id.TimeWarm).Text = FindViewById<TextView>(Resource.Id.TimeWarm).Text + "\n" + pogreb.time_power;
             FindViewById<TextView>(Resource.Id.PriceEE).Text = FindViewById<TextView>(Resource.Id.PriceEE).Text + "\n" + pogreb.price_kWt;
             FindViewById<TextView>(Resource.Id.Pressure).Text = FindViewById<TextView>(Resource.Id.Pressure).Text + "\n\n" + pogreb.pressure;
             FindViewById<TextView>(Resource.Id.dateUpdate).Text = pogreb.date_hange;
-            if(pogreb.heating == "1")
+            if (pogreb.heating == "1")
                 FindViewById<Button>(Resource.Id.butsOnOff).SetBackgroundResource(Resource.Drawable.Power_On);
 
 
@@ -77,11 +79,11 @@ namespace Pogrebok
              {
                  pogreb = Core.GetPogrebokData().Result;
                  weather1 = Core_Weather_api.GetWeather().Result;
-                 FindViewById<TextView>(Resource.Id.TempMax).Text = TempMax + "\n\n" + pogreb.street_temp_max;
-                 FindViewById<TextView>(Resource.Id.TempMin).Text = TempMin + "\n\n" + pogreb.street_temp_min;
-                 FindViewById<TextView>(Resource.Id.TempPogrebok).Text = TempPogrebok + "\n\n" + pogreb.cellar_temp;
-                 FindViewById<TextView>(Resource.Id.TempStreet).Text = TempStreet + "\n\n" + pogreb.street_temp_current;
-                 FindViewById<TextView>(Resource.Id.TempHome).Text = TempHome + "\n\n" + pogreb.home_temp;
+                 FindViewById<TextView>(Resource.Id.TempMax).Text = TempMax + "\n\n" + pogreb.street_temp_max + " °C";
+                 FindViewById<TextView>(Resource.Id.TempMin).Text = TempMin + "\n\n" + pogreb.street_temp_min + " °C";
+                 FindViewById<TextView>(Resource.Id.TempPogrebok).Text = TempPogrebok + "\n\n" + pogreb.cellar_temp + " °C";
+                 FindViewById<TextView>(Resource.Id.TempStreet).Text = TempStreet + "\n\n" + pogreb.street_temp_current + " °C";
+                 FindViewById<TextView>(Resource.Id.TempHome).Text = TempHome + "\n\n" + pogreb.home_temp + " °C";
                  FindViewById<TextView>(Resource.Id.RashodEE).Text = RashodEE + "\n\n" + pogreb.kwt_full;
                  FindViewById<TextView>(Resource.Id.TimeWarm).Text = TimeWarm + "\n" + pogreb.time_power;
                  FindViewById<TextView>(Resource.Id.PriceEE).Text = PriceEE + "\n" + pogreb.price_kWt;
@@ -101,19 +103,12 @@ namespace Pogrebok
                   OverridePendingTransition(Resource.Animation.trans, Resource.Animation.alpha);
               };
 
-            button = FindViewById<Button>(Resource.Id.TempMax); //Вызов Меню
-            button.Click += (s, arg) =>
-              {
-                  pogreb = Core.GetPogrebokData_temp().Result;
+            
+            button = FindViewById<Button>(Resource.Id.TempMin);
+            button.Click += tMinAlertDialog;
 
-                  PopupMenu menu = new PopupMenu(this, button);
-                  menu.Inflate(Resource.Menu.menuTemp);
-
-                  menu.Menu.FindItem(Resource.Id.menuTempMax).SetTitle("TempMax= " + pogreb.street_temp_max_byDate);
-                  menu.Menu.FindItem(Resource.Id.menuTempMin).SetTitle("TempMin= " + pogreb.street_temp_min_byDate);
-
-                  menu.Show();
-              };
+            button = FindViewById<Button>(Resource.Id.TempMax);
+            button.Click += tMaxAlertDialog;
 
             //button = FindViewById<Button>(Resource.Id.buttWeather);
             //button.Click += delegate
@@ -134,8 +129,31 @@ namespace Pogrebok
 
         }
 
+        //Диалог отображения минимальной температуры
+        void tMinAlertDialog(object sender, EventArgs e)
+        {
+            pogreb = Core.GetPogrebokData_temp().Result;
+            AlertDialog.Builder adb = new AlertDialog.Builder(this);
+            AlertDialog alertDialog = adb.Create();
+            alertDialog.SetTitle("Минимальная температура");
+            alertDialog.SetMessage("Минимальная температура на улице за месяц = " + pogreb.street_temp_min_byDate + " °C");
+            alertDialog.SetButton2("OK", (s, ev) => { });
+            alertDialog.SetButton("График за месяц", (s, ev) => { });
+            alertDialog.Show();
+        }
 
-
+        //Диалог отображения максимальной температуры
+        void tMaxAlertDialog(object sender, EventArgs e)
+        {
+            pogreb = Core.GetPogrebokData_temp().Result;
+            AlertDialog.Builder adb = new AlertDialog.Builder(this);
+            AlertDialog alertDialog = adb.Create();
+            alertDialog.SetTitle("Максимальная температура");
+            alertDialog.SetMessage("Максимальная температура на улице за месяц = " + pogreb.street_temp_max_byDate + " °C");
+            alertDialog.SetButton2("OK", (s, ev) => { });
+            alertDialog.SetButton("График за месяц", (s, ev) => { });
+            alertDialog.Show();
+        }
  
     }
 }

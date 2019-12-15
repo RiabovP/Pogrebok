@@ -595,6 +595,9 @@ namespace Pogrebok
 			// aapt resource value: 0x7f050005
 			public const int TempStreet = 2131034117;
 			
+			// aapt resource value: 0x7f05000d
+			public const int gradus = 2131034125;
+			
 			static String()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
