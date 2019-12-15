@@ -28,7 +28,7 @@ namespace Pogrebok
         string Pressure;
         string PrognozTemp;
         string Date_hange;
-        string Heating;
+        //string Heating;
 
 
 
@@ -74,6 +74,7 @@ namespace Pogrebok
             Weather1 weather1 = Core_Weather_api.GetWeather().Result;
             FindViewById<TextView>(Resource.Id.buttWeather).Text = FindViewById<TextView>(Resource.Id.buttWeather).Text + "\n\n" + weather1.Temperature;
 
+            //Обновление данных для главной страницы
             Button button = FindViewById<Button>(Resource.Id.Refresh);
             button.Click += delegate
              {
@@ -110,6 +111,13 @@ namespace Pogrebok
             button = FindViewById<Button>(Resource.Id.TempMax);
             button.Click += tMaxAlertDialog;
 
+            button = FindViewById<Button>(Resource.Id.countTurnOn);
+            button.Click += delegate
+            {
+                setDate();
+
+            };
+
             //button = FindViewById<Button>(Resource.Id.buttWeather);
             //button.Click += delegate
             //{
@@ -118,6 +126,7 @@ namespace Pogrebok
             //    OverridePendingTransition(Resource.Animation.trans, Resource.Animation.alpha);
             //};
         }
+        //Сохранение в preference
         void Save_state()
         {
             sPref = GetSharedPreferences("MyPref", FileCreationMode.Private);
@@ -127,6 +136,13 @@ namespace Pogrebok
             ed.Commit();
             Toast.MakeText(this, "Параметр Минимальная температура сохранена", ToastLength.Short).Show();
 
+        }
+
+        //Дата пикер метод появления
+        public void setDate()
+        {
+            DateTime date = DateTime.Today;
+            new DatePickerDialog(this, onDataSet, date.Year, date.Month-1, date.Day).Show();
         }
 
         //Диалог отображения минимальной температуры
@@ -155,6 +171,21 @@ namespace Pogrebok
             alertDialog.Show();
         }
  
+        //Функция сохранения выбор из датапикера
+        private void onDataSet(object sender, DatePickerDialog.DateSetEventArgs e)
+        {
+            pogreb.DatePic = e.Date.ToLongDateString();
+            string date;
+            int month = e.Month + 1;
+            date = e.Year.ToString() + "." + month.ToString() + "." + e.DayOfMonth.ToString();
+
+            Intent intent = new Intent(this, typeof(DatePickerActivity));
+
+            intent.PutExtra("fname", date);
+            StartActivity(intent);
+
+            //throw new NotImplementedException();
+        }
     }
 }
 

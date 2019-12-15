@@ -38,6 +38,7 @@ namespace Shared
             return pogrebData;
         }
 
+        //Запрос на минимульную/максимальную за месяц в алерт попап
         public static async Task<PogrebokV1> GetPogrebokData_temp()
         {
             string queryString = "http://37.193.0.199:1010/Tmax_Tmin.php?Tmax_Tmin";
@@ -50,6 +51,23 @@ namespace Shared
 
             pogrebData.street_temp_max_byDate = (string)pogrebokOverview["Tmax"];
             pogrebData.street_temp_min_byDate = (string)pogrebokOverview["Tmin"];
+
+            return pogrebData;
+        }
+
+        //Запрос минимальной/максимальной для календаря
+        public static async Task<PogrebokV1> GetPogrebokData_temp_calendar(string date)
+        {
+            string queryString = "http://37.193.0.199:1010/Tmax_Tmin.php?Tmax_Tmin"+"&date="+date;
+
+            dynamic result = await DataService.getDataFromPogrebok(queryString).ConfigureAwait(false);
+
+            dynamic pogrebokOverview = result["contents"];
+
+            PogrebokV1 pogrebData = new PogrebokV1();
+
+            pogrebData.street_temp_max_byDateCal = (string)pogrebokOverview["Tmax"];
+            pogrebData.street_temp_min_byDateCal = (string)pogrebokOverview["Tmin"];
 
             return pogrebData;
         }
