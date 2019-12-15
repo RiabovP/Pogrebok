@@ -106,10 +106,10 @@ namespace Pogrebok
 
             
             button = FindViewById<Button>(Resource.Id.TempMin);
-            button.Click += tMinAlertDialog;
+            button.Click += Temp_MinAlertDialog;
 
             button = FindViewById<Button>(Resource.Id.TempMax);
-            button.Click += tMaxAlertDialog;
+            button.Click += Temp_MaxAlertDialog;
 
             button = FindViewById<Button>(Resource.Id.countTurnOn);
             button.Click += delegate
@@ -142,11 +142,11 @@ namespace Pogrebok
         public void setDate()
         {
             DateTime date = DateTime.Today;
-            new DatePickerDialog(this, onDataSet, date.Year, date.Month-1, date.Day).Show();
+            new DatePickerDialog(this, OnDataSet, date.Year, date.Month-1, date.Day).Show();
         }
 
         //Диалог отображения минимальной температуры
-        void tMinAlertDialog(object sender, EventArgs e)
+        private void Temp_MinAlertDialog(object sender, EventArgs e)
         {
             pogreb = Core.GetPogrebokData_temp().Result;
             AlertDialog.Builder adb = new AlertDialog.Builder(this);
@@ -159,7 +159,7 @@ namespace Pogrebok
         }
 
         //Диалог отображения максимальной температуры
-        void tMaxAlertDialog(object sender, EventArgs e)
+        private void Temp_MaxAlertDialog(object sender, EventArgs e)
         {
             pogreb = Core.GetPogrebokData_temp().Result;
             AlertDialog.Builder adb = new AlertDialog.Builder(this);
@@ -172,7 +172,7 @@ namespace Pogrebok
         }
  
         //Функция сохранения выбор из датапикера
-        private void onDataSet(object sender, DatePickerDialog.DateSetEventArgs e)
+        private void OnDataSet(object sender, DatePickerDialog.DateSetEventArgs e)
         {
             pogreb.DatePic = e.Date.ToLongDateString();
             string date;
